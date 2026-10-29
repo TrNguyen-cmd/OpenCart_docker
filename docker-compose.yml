@@ -20,7 +20,8 @@ services:
       - ./TechStation:/var/www/html
       - ./storage:/var/www/storage
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - opencart_net
 
@@ -41,6 +42,12 @@ services:
     command:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-rootpassword}"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
+      start_period: 10s
     networks:
       - opencart_net
 
@@ -55,7 +62,8 @@ services:
       PMA_PORT: ${DB_PORT:-3306}
       UPLOAD_LIMIT: 64M
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - opencart_net
 
