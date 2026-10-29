@@ -33,8 +33,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpassword}
       MYSQL_DATABASE: ${DB_NAME:-techstation}
-      MYSQL_USER: ${DB_USER:-techstation_user}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-techstation_password}
+      MYSQL_USER: ${MYSQL_USER:-techstation_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-techstation_password}
     volumes:
       - db_data:/var/lib/mysql
       - ./database/init:/docker-entrypoint-initdb.d:ro
