@@ -138,4 +138,17 @@ $_['error_reward_add']           = 'Cảnh báo: Điểm thưởng cho đơn hà
 $_['error_commission_add']       = '
 
 Cảnh báo: Hoa hồng cho đơn hàng này đã được thêm!';
-?>
+?>$_['text_model'] = 'Mã sản phẩm';
+$_['text_tbc']   = 'Chờ xác nhận';
+$_['text_sku']   = 'SKU';
+$_['text_upc']   = 'UPC';
+$_['text_ean']   = 'EAN';
+$_['text_jan']   = 'JAN';
+$_['text_isbn']  = 'ISBN';
+$_['text_mpn']   = 'MPN';
+$_['column_product_total'] = 'Số lượng sản phẩm';
+$_['column_model']         = 'Mã sản phẩm';
+$_['entry_order_id']       = 'Mã Đơn Hàng';
+$_['entry_date_modified_from'] = 'Ngày Sửa Từ';
+$_['entry_date_modified_to']   = 'Ngày Sửa Đến';
+$_['error_reward_guest']       = 'Cảnh báo: Khách vãng lai không thể sử dụng điểm thưởng!';

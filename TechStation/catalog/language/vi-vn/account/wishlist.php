@@ -21,3 +21,5 @@ $_['column_action']   = 'Hành động';
 
 // Lỗi
 $_['error_product']   = 'Cảnh báo: Không thể tìm thấy sản phẩm!';
+// Bổ sung
+$_['error_login'] = 'Cảnh báo: Bạn phải <a href="%s">đăng nhập</a> hoặc <a href="%s">tạo tài khoản</a> để quản lý <a href="%s">danh sách yêu thích</a>!';

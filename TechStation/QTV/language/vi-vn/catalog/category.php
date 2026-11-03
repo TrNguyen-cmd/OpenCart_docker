@@ -47,3 +47,5 @@ $_['error_parent']            = 'Danh mục cha bạn đã chọn là con của 
 $_['error_keyword']           = 'URL SEO phải từ 1 đến 64 ký tự!';
 $_['error_keyword_exists']    = 'URL SEO phải là duy nhất!';
 $_['error_keyword_character'] = 'Từ khóa chỉ có thể sử dụng các ký tự a-z, 0-9, - và _!';
+$_['text_filter']   = 'Bộ Lọc';
+$_['column_image']  = 'Hình Ảnh';

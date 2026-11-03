@@ -14,3 +14,5 @@ $_['column_action']     = 'Hành động';
 // Error
 $_['error_permission']  = 'Cảnh báo: Bạn không có quyền chỉnh sửa khởi động!';
 ?>
+$_['text_info']          = 'Thông Tin Khởi Động';
+$_['entry_description']  = 'Mô Tả';

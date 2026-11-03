@@ -56,3 +56,4 @@ $_['error_exists']        = 'Cảnh báo: Mã phiếu giảm giá đã được 
 $_['error_name']          = 'Tên phiếu giảm giá phải từ 3 đến 128 ký tự!';
 $_['error_code']          = 'Mã phải từ 3 đến 20 ký tự!';
 ?>
+$_['entry_date'] = 'Khoảng Thời Gian';

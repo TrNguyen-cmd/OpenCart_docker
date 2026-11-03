@@ -85,3 +85,7 @@ $_['text_zone']                = 'Khu vực';
 $_['text_complete_status']     = 'Đơn hàng đã hoàn thành';
 $_['text_processing_status']   = 'Đơn hàng đang xử lý';
 $_['text_other_status']        = 'Trạng thái khác';
+$_['text_antifraud']    = 'Chống Gian Lận';
+$_['text_filter_group'] = 'Nhóm Bộ Lọc';
+$_['text_identifier']   = 'Mã Định Danh';
+$_['text_modification'] = 'Gói Chỉnh Sửa';

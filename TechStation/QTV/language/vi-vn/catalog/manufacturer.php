@@ -31,3 +31,4 @@ $_['error_keyword']           = 'URL SEO phải từ 1 đến 64 ký tự!';
 $_['error_keyword_exists']    = 'URL SEO phải là duy nhất!';
 $_['error_keyword_character'] = 'Từ khóa chỉ có thể sử dụng các ký tự a-z, 0-9, - và _!';
 $_['error_product']           = 'Cảnh báo: Nhà sản xuất này không thể bị xóa vì nó hiện đang được gán cho %s sản phẩm!';
+$_['column_image'] = 'Hình Ảnh';

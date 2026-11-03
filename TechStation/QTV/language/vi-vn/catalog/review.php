@@ -40,3 +40,4 @@ $_['error_product']     = 'Sản phẩm là bắt buộc!';
 $_['error_author']      = 'Tác giả phải có độ dài từ 3 đến 64 ký tự!';
 $_['error_text']        = 'Nội dung đánh giá phải có ít nhất 1 ký tự!';
 $_['error_rating']      = 'Xếp hạng đánh giá là bắt buộc!';
+$_['entry_date_added'] = 'Ngày Thêm';

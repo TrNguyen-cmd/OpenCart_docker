@@ -26,3 +26,7 @@ $_['error_permission']  = 'Cảnh báo: Bạn không có quyền thay đổi cá
 $_['error_group']       = 'Tên nhóm bộ lọc phải từ 1 đến 64 ký tự!';
 $_['error_name']        = 'Tên bộ lọc phải từ 1 đến 64 ký tự!';
 $_['error_values']      = 'Cảnh báo: Giá trị bộ lọc là bắt buộc!';
+$_['column_name']         = 'Tên Bộ Lọc';
+$_['column_filter_group'] = 'Nhóm Bộ Lọc';
+$_['entry_filter_group']  = 'Nhóm Bộ Lọc';
+$_['error_filter_group']  = 'Yêu cầu chọn Nhóm Bộ Lọc!';

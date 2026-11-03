@@ -4267,9 +4267,9 @@ LOCK TABLES `oc_length_class_description` WRITE;
 /*!40000 ALTER TABLE `oc_length_class_description` DISABLE KEYS */;
 INSERT INTO `oc_length_class_description` VALUES
 (1,1,'Centimeter','cm'),
-(1,2,'Centimeter','cm'),
+(1,2,'Xen-ti-mét','cm'),
 (2,1,'Millimeter','mm'),
-(2,2,'Millimeter','mm'),
+(2,2,'Mi-li-mét','mm'),
 (3,1,'Inch','in'),
 (3,2,'Inch','in');
 /*!40000 ALTER TABLE `oc_length_class_description` ENABLE KEYS */;
@@ -7637,13 +7637,13 @@ LOCK TABLES `oc_return_action` WRITE;
 /*!40000 ALTER TABLE `oc_return_action` DISABLE KEYS */;
 INSERT INTO `oc_return_action` VALUES
 (1,1,'Waiting for return'),
-(1,2,'Waiting for return'),
+(1,2,'Đang chờ hoàn hàng'),
 (2,1,'Credit Issued'),
-(2,2,'Credit Issued'),
+(2,2,'Cấp tiền tích lũy'),
 (3,1,'Replacement Sent'),
-(3,2,'Replacement Sent'),
+(3,2,'Đã gửi hàng thay thế'),
 (4,1,'Refunded'),
-(4,2,'Refunded');
+(4,2,'Đã hoàn tiền');
 /*!40000 ALTER TABLE `oc_return_action` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7697,15 +7697,15 @@ LOCK TABLES `oc_return_reason` WRITE;
 /*!40000 ALTER TABLE `oc_return_reason` DISABLE KEYS */;
 INSERT INTO `oc_return_reason` VALUES
 (1,1,'Dead On Arrival'),
-(1,2,'Dead On Arrival'),
+(1,2,'Hỏng hóc khi nhận hàng'),
 (2,1,'Received Wrong Item'),
-(2,2,'Received Wrong Item'),
+(2,2,'Nhận sai sản phẩm'),
 (3,1,'Order Error'),
-(3,2,'Order Error'),
+(3,2,'Lỗi đặt hàng'),
 (4,1,'Faulty, please supply details'),
-(4,2,'Faulty, please supply details'),
+(4,2,'Sản phẩm lỗi, vui lòng cung cấp chi tiết'),
 (5,1,'Other, please supply details'),
-(5,2,'Other, please supply details');
+(5,2,'Lý do khác, vui lòng cung cấp chi tiết');
 /*!40000 ALTER TABLE `oc_return_reason` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7732,11 +7732,11 @@ LOCK TABLES `oc_return_status` WRITE;
 /*!40000 ALTER TABLE `oc_return_status` DISABLE KEYS */;
 INSERT INTO `oc_return_status` VALUES
 (1,1,'Pending'),
-(1,2,'Pending'),
+(1,2,'Chờ xử lý'),
 (2,1,'Awaiting Products'),
-(2,2,'Awaiting Products'),
+(2,2,'Đang chờ nhận sản phẩm'),
 (3,1,'Complete'),
-(3,2,'Complete');
+(3,2,'Hoàn thành');
 /*!40000 ALTER TABLE `oc_return_status` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8099,8 +8099,8 @@ CREATE TABLE `oc_session` (
 LOCK TABLES `oc_session` WRITE;
 /*!40000 ALTER TABLE `oc_session` DISABLE KEYS */;
 INSERT INTO `oc_session` VALUES
-('48a9f718077e7883d44c414e8e','{\"currency\":\"vnd\",\"user_id\":\"1\",\"user_token\":\"bc3cc140daf020d887f9a9907683e935\",\"upload_token\":\"6b0ecd1aaf411ddc1abc58eb3f71c456\",\"review_token\":\"e32c74c1ac8d1259568ec28e5f26c02e\"}','2026-11-01 11:12:39'),
-('c49d6756ff573763e1055e6cc3','{\"currency\":\"vnd\"}','2026-11-01 10:03:12');
+('351cfa8783bf40f79bb5c53a19','{\"currency\":\"vnd\"}','2026-11-02 11:36:06'),
+('fa1c9ce2af87248d16cb1bb665','{\"currency\":\"vnd\"}','2026-11-02 11:35:59');
 /*!40000 ALTER TABLE `oc_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9322,11 +9322,11 @@ LOCK TABLES `oc_weight_class_description` WRITE;
 /*!40000 ALTER TABLE `oc_weight_class_description` DISABLE KEYS */;
 INSERT INTO `oc_weight_class_description` VALUES
 (1,1,'Kilogram','kg'),
-(1,2,'Kilogram','kg'),
+(1,2,'Ki-lô-gam','kg'),
 (2,1,'Gram','g'),
-(2,2,'Gram','g'),
+(2,2,'Gam','g'),
 (3,1,'Pound ','lb'),
-(3,2,'Pound ','lb'),
+(3,2,'Pao','lb'),
 (4,1,'Ounce','oz'),
 (4,2,'Ounce','oz');
 /*!40000 ALTER TABLE `oc_weight_class_description` ENABLE KEYS */;
@@ -21727,4 +21727,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-10-31 11:17:59
+-- Dump completed on 2026-11-01 11:36:51

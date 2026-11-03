@@ -23,3 +23,12 @@ $_['error_not_found']    = 'Cảnh báo: Địa chỉ E-Mail không được tì
 $_['error_password']     = 'Mật khẩu phải từ 4 đến 20 ký tự!';
 $_['error_confirm']      = 'Mật khẩu và xác nhận mật khẩu không khớp!';
 $_['error_code']         = 'Mã đặt lại mật khẩu không hợp lệ hoặc đã được sử dụng trước đó!';
+
+// Bổ sung
+$_['text_sent']                 = 'Một email với liên kết xác nhận đã được gửi đến địa chỉ email của bạn!';
+$_['text_reset']                = 'Thành công: Mật khẩu của bạn đã được cập nhật thành công.';
+$_['error_password_uppercase']  = 'chữ hoa';
+$_['error_password_lowercase']  = 'chữ thường';
+$_['error_password_number']     = 'chữ số';
+$_['error_password_symbol']     = 'ký tự đặc biệt';
+$_['error_password_length']     = 'Mật khẩu phải từ %d đến 20 ký tự!';

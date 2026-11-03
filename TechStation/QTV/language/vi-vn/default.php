@@ -366,3 +366,4 @@ $_['datepicker']                    = 'vi';
 //$_['datepicker']                  = 'zh-cn';
 //$_['datepicker']                  = 'zh-hk';
 //$_['datepicker']                  = 'zh-tw';
+$_['button_login'] = 'Đăng Nhập';

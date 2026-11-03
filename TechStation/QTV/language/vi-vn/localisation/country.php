@@ -31,3 +31,5 @@ $_['error_store']             = 'Cảnh báo: Quốc gia này không thể bị 
 $_['error_address']           = 'Cảnh báo: Quốc gia này không thể bị xóa vì nó hiện đang được gán cho %s mục sổ địa chỉ!';
 $_['error_zone']              = 'Cảnh báo: Quốc gia này không thể bị xóa vì nó hiện đang được gán cho %s khu vực!';
 $_['error_zone_to_geo_zone']  = 'Cảnh báo: Quốc gia này không thể bị xóa vì nó hiện đang được gán cho %s khu vực đến các khu vực địa lý!';
+$_['error_iso_code_2'] = 'Mã ISO 2 phải gồm 2 ký tự!';
+$_['error_iso_code_3'] = 'Mã ISO 3 phải gồm 3 ký tự!';

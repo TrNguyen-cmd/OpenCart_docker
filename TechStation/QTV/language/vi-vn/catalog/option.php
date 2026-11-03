@@ -41,3 +41,6 @@ $_['error_type']         = 'Cảnh báo: Cần có các giá trị tùy chọn!'
 $_['error_option_value'] = 'Tên giá trị tùy chọn phải từ 1 đến 128 ký tự!';
 $_['error_value']        = 'Cảnh báo: Giá trị tùy chọn này không thể bị xóa vì nó hiện đang được gán cho %s sản phẩm!';
 $_['error_product']      = 'Cảnh báo: Tùy chọn này không thể bị xóa vì nó hiện đang được gán cho %s sản phẩm!';
+$_['text_regex']        = 'Regex';
+$_['entry_validation']  = 'Xác Thực';
+$_['help_regex']        = 'Sử dụng biểu thức chính quy regex. Ví dụ: /[^a-zA-Z0-9_-]/';

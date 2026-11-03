@@ -33,3 +33,4 @@ $_['error_permission'] = 'Cảnh báo: Bạn không có quyền thay đổi vị
 $_['error_name']       = 'Tên cửa hàng phải từ 3 đến 32 ký tự!';
 $_['error_address']    = 'Địa chỉ phải từ 3 đến 128 ký tự!';
 $_['error_telephone']  = 'Số điện thoại phải từ 3 đến 32 ký tự!';
+$_['help_telephone'] = 'Vui lòng nhập số điện thoại địa điểm cửa hàng của bạn.';

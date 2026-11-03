@@ -38,3 +38,7 @@ $_['error_country']      = 'Vui lòng chọn một quốc gia!';
 $_['error_zone']         = 'Vui lòng chọn một vùng / bang!';
 $_['error_custom_field'] = '%s là bắt buộc!';
 $_['error_regex']        = '%s không hợp lệ!'
+// Bổ sung
+$_['text_default']   = 'Mặc Định';
+$_['error_regex']    = '%s không phải là đầu vào hợp lệ!';
+$_['text_default']   = 'Mặc Định';

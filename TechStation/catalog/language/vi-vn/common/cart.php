@@ -17,3 +17,5 @@ $_['text_checkout']              = 'Thanh Toán';
 
 // Lỗi
 $_['error_product']              = 'Cảnh báo: Không thể tìm thấy sản phẩm!';
+// Bổ sung
+$_['text_model'] = 'Mã sản phẩm';

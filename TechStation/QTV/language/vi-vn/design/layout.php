@@ -36,3 +36,5 @@ $_['error_product']       = 'Cảnh báo: Bố cục này không thể bị xóa
 $_['error_category']      = 'Cảnh báo: Bố cục này không thể bị xóa vì nó hiện đang được gán cho %s danh mục!';
 $_['error_manufacturer']  = 'Cảnh báo: Bố cục này không thể bị xóa vì nó hiện đang được gán cho %s nhà sản xuất!';
 $_['error_information']   = 'Cảnh báo: Bố cục này không thể bị xóa vì nó hiện đang được gán cho %s trang thông tin!';
+$_['error_article'] = 'Cảnh báo: Bố cục này không thể xóa vì đang được gán cho %s trang bài viết!';
+$_['error_topic']   = 'Cảnh báo: Bố cục này không thể xóa vì đang được gán cho %s trang chủ đề!';

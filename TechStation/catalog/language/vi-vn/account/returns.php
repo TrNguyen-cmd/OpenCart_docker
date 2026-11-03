@@ -62,3 +62,12 @@ $_['error_product']      = 'Tên Sản Phẩm phải lớn hơn 3 và nhỏ hơn
 $_['error_model']        = 'Mẫu Sản Phẩm phải lớn hơn 3 và nhỏ hơn 64 ký tự!';
 $_['error_reason']       = 'Bạn phải chọn lý do trả hàng!';
 $_['error_agree']        = 'Cảnh báo: Bạn phải đồng ý với %s!';
+
+// Bổ sung
+$_['text_customer']             = 'Thông Tin Của Bạn';
+$_['text_order_id']             = 'Mã Đơn Hàng';
+$_['text_opened']               = 'Đã Mở Gói';
+$_['text_unopened']             = 'Chưa Mở Gói';
+$_['text_action']               = 'Hành Động';
+$_['text_tbc']                  = 'Chờ xác nhận';
+$_['error_return']              = 'Không tìm thấy yêu cầu đổi trả bạn yêu cầu!';

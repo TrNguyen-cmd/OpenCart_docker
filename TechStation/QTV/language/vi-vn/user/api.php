@@ -29,3 +29,5 @@ $_['error_permission']     = 'Cảnh báo: Bạn không có quyền thay đổi 
 $_['error_username']       = 'Tên người dùng API phải từ 3 đến 20 ký tự!';
 $_['error_key']            = 'Khóa API phải từ 64 đến 256 ký tự!';
 $_['error_ip']             = 'Bạn phải thêm ít nhất một IP vào danh sách được phép!';
+$_['text_history'] = 'Lịch Sử Gọi API';
+$_['column_call']  = 'Lệnh Gọi (Call)';

@@ -14,3 +14,4 @@ $_['column_action']    = 'Hành động';
 // Lỗi
 $_['error_permission'] = 'Cảnh báo: Bạn không có quyền thay đổi ngôn ngữ!';
 $_['error_extension']  = 'Cảnh báo: Phần mở rộng không tồn tại!';
+$_['error_default'] = 'Cảnh báo: Phần mở rộng này không thể gỡ cài đặt vì hiện đang được gán làm ngôn ngữ quản trị mặc định!';

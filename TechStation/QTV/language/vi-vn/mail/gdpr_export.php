@@ -23,4 +23,4 @@ $_['text_zone']       = 'Vùng / Bang';
 $_['text_history']    = 'Lịch sử đăng nhập';
 $_['text_ip']         = 'IP';
 $_['text_date_added'] = 'Ngày thêm';
-$_['text_thanks']     = 'Cảm ơn,';
+$_['text_thanks']     = 'Cảm ơn,';$_['text_contact'] = 'Để biết thêm thông tin, bạn có thể liên hệ với chủ cửa hàng tại đây:';

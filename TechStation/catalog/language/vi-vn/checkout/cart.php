@@ -35,3 +35,7 @@ $_['error_minimum']              = 'Số lượng đặt hàng tối thiểu cho
 $_['error_required']             = '%s là bắt buộc!';
 $_['error_product']              = 'Cảnh báo: Không thể tìm thấy sản phẩm!';
 $_['error_subscription']         = 'Vui lòng chọn một gói đăng ký!';
+
+// Bổ sung
+$_['text_model']   = 'Mã sản phẩm';
+$_['error_regex']  = '%s không phải là đầu vào hợp lệ!';

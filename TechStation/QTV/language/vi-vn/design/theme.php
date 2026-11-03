@@ -21,3 +21,12 @@ $_['column_action']     = 'Hành động';
 // Lỗi
 $_['error_permission']  = 'Cảnh báo: Bạn không có quyền thay đổi trình chỉnh sửa giao diện!';
 $_['error_twig']        = 'Cảnh báo: Bạn chỉ có thể lưu các tệp .twig!';
+$_['text_add']        = 'Thêm Giao Diện';
+$_['text_code']       = 'Trình Soạn Thảo Mã Giao Diện';
+$_['column_status']   = 'Trạng Thái';
+$_['entry_store']     = 'Cửa Hàng';
+$_['entry_route']     = 'Chọn Mẫu Giao Diện';
+$_['entry_code']      = 'Mã Code';
+$_['entry_status']    = 'Trạng Thái';
+$_['button_history']  = 'Lịch Sử';
+$_['error_file'] = 'Cảnh báo: Tệp mẫu giao diện không tồn tại!';

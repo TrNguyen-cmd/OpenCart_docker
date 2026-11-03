@@ -44,3 +44,10 @@ $_['column_date_added']          = 'Ngày Thêm';
 
 // Lỗi
 $_['error_reorder']              = '%s hiện không có sẵn để đặt lại.';
+// Bổ sung
+$_['text_tbc']                  = 'Chờ xác nhận';
+$_['text_model']                = 'Mã sản phẩm';
+$_['text_points']               = 'Điểm Thưởng';
+$_['text_date_next']            = 'Ngày tiếp theo';
+$_['text_remaining']            = 'Còn lại';
+$_['column_product_total']      = 'Số lượng sản phẩm';

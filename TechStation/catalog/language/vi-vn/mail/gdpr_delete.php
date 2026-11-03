@@ -10,3 +10,5 @@ $_['text_thanks']    = 'Cảm ơn,';
 
 // Button
 $_['button_contact'] = 'Liên hệ chúng tôi
+// Bổ sung
+$_['button_contact'] = 'Liên Hệ Chúng Tôi';

@@ -23,3 +23,9 @@ $_['button_off']       = 'Tắt';
 
 // Lỗi
 $_['error_permission'] = 'Cảnh báo: Bạn không có quyền thay đổi cài đặt nhà phát triển!';
+$_['text_developer_success'] = 'Thành công: Bạn đã sửa cài đặt nhà phát triển!';
+$_['text_cache_success']     = 'Thành công: Bạn đã xóa bộ nhớ đệm cache!';
+$_['text_theme_success']     = 'Thành công: Bạn đã xóa cache giao diện theme!';
+$_['text_sass_success']      = 'Thành công: Bạn đã xóa cache SASS!';
+$_['text_vendor_success']    = 'Thành công: Bạn đã xóa cache nhà cung cấp vendor!';
+$_['text_vendor']            = 'Vendor';

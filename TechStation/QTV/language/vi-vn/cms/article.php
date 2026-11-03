@@ -41,4 +41,6 @@ $_['error_meta_title']        = 'Tiêu đề Meta phải lớn hơn 1 và nhỏ 
 $_['error_keyword']           = 'URL SEO phải từ 1 đến 64 ký tự!';
 $_['error_keyword_exists']    = 'URL SEO phải là duy nhất!';
 $_['error_keyword_character'] = 'Từ khóa chỉ có thể sử dụng các ký tự a-z, 0-9, - và _!';
-$_['error_author']            = 'Tác giả phải từ 3 đến 64 ký tự!';
+$_['error_author']            = 'Tác giả phải từ 3 đến 64 ký tự!';$_['text_next']     = 'Thành công: Bạn đã sửa %s đến %s trong tổng số %s xếp hạng bài viết!';
+$_['column_rating'] = 'Đánh Giá';
+$_['button_rating'] = 'Tính Toán Đánh Giá';

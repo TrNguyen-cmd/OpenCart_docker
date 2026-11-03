@@ -20,3 +20,5 @@ $_['error_shipping_address'] = 'Địa chỉ giao hàng là bắt buộc!';
 $_['error_shipping_method']  = 'Phương thức vận chuyển là bắt buộc!';
 $_['error_payment_method']   = 'Phương thức thanh toán là bắt buộc!';
 $_['error_no_payment']       = 'Không có tùy chọn thanh toán nào khả dụng. Vui lòng <a href="%s">liên hệ với chúng tôi</a> để được hỗ trợ!';
+// Bổ sung
+$_['error_order'] = 'Không tìm thấy đơn hàng! Vui lòng tải lại trang.';

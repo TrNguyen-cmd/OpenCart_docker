@@ -33,3 +33,10 @@ $_['error_custom_field']   = '%s là bắt buộc!';
 $_['error_regex']          = '%s không hợp lệ!';
 $_['error_password']       = 'Mật khẩu phải từ 4 đến 20 ký tự!';
 $_['error_agree']          = 'Cảnh báo: Bạn phải đồng ý với %s!';
+
+// Bổ sung
+$_['error_password_uppercase']  = 'chữ hoa';
+$_['error_password_lowercase']  = 'chữ thường';
+$_['error_password_number']     = 'chữ số';
+$_['error_password_symbol']     = 'ký tự đặc biệt';
+$_['error_password_length']     = 'Mật khẩu phải từ %d đến 40 ký tự!';

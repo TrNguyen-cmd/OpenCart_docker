@@ -26,4 +26,8 @@ $_['error_confirm']         = 'Mật khẩu và xác nhận mật khẩu không 
 $_['error_firstname']       = 'Tên phải từ 1 đến 32 ký tự!';
 $_['error_lastname']        = 'Họ phải từ 1 đến 32 ký tự!';
 $_['error_email']           = 'Địa chỉ E-Mail không hợp lệ!';
-$_['error_email_exists']    = 'Cảnh báo: Địa chỉ E-Mail đã được đăng ký!';
+$_['error_email_exists']    = 'Cảnh báo: Địa chỉ E-Mail đã được đăng ký!';$_['error_password_uppercase'] = 'chữ hoa';
+$_['error_password_lowercase'] = 'chữ thường';
+$_['error_password_number']    = 'chữ số';
+$_['error_password_symbol']    = 'ký tự đặc biệt';
+$_['error_password_length']    = 'Mật khẩu phải từ %d đến 20 ký tự!';

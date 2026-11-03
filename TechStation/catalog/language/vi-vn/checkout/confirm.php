@@ -17,3 +17,6 @@ $_['column_model']               = 'Mẫu';
 $_['column_quantity']            = 'Số Lượng';
 $_['column_price']               = 'Đơn Giá';
 $_['column_total']               = 'Tổng Cộng';
+// Bổ sung
+$_['text_model']     = 'Mã sản phẩm';
+$_['column_product'] = 'Sản Phẩm';
