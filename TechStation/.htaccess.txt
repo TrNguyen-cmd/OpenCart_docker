@@ -47,7 +47,7 @@ Options -Indexes
 ## SEO URL Settings
 RewriteEngine On
 ## If your opencart installation does not run on the main web folder make sure you folder it does run in ie. / becomes /shop/
-RewriteBase /
+RewriteBase / TechStation
 ## Rewrite Rules
 RewriteRule ^system/storage/(.*) index.php?route=error/not_found [L]
 RewriteCond %{REQUEST_FILENAME} !-f

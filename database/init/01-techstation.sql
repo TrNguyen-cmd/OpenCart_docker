@@ -640,7 +640,7 @@ CREATE TABLE `oc_banner_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`banner_image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=300 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=305 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -650,10 +650,6 @@ CREATE TABLE `oc_banner_image` (
 LOCK TABLES `oc_banner_image` WRITE;
 /*!40000 ALTER TABLE `oc_banner_image` DISABLE KEYS */;
 INSERT INTO `oc_banner_image` VALUES
-(79,7,1,'iPhone 6','index.php?route=product/product&amp;path=57&amp;product_id=49','catalog/demo/banners/iPhone6.jpg',0),
-(80,7,1,'MacBookAir','','catalog/demo/banners/MacBookAir.jpg',0),
-(99,7,2,'iPhone 6','index.php?route=product/product&amp;path=57&amp;product_id=49','catalog/demo/banners/iPhone6.jpg',0),
-(100,7,2,'MacBookAir','','catalog/demo/banners/MacBookAir.jpg',0),
 (277,8,2,'Iphone','http://localhost:8081/index.php?route=product/category&amp;language=vi-vn&amp;path=59_61','catalog/Logo/2.png',0),
 (278,8,2,'Xiaomi','http://localhost:8081/index.php?route=product/category&amp;language=vi-vn&amp;path=59_63','catalog/Logo/4.webp',1),
 (279,8,2,'Asus','http://localhost:8081/index.php?route=product/category&amp;language=vi-vn&amp;path=64_66','catalog/Logo/6.png',2),
@@ -674,7 +670,12 @@ INSERT INTO `oc_banner_image` VALUES
 (296,6,2,'Laptop ASUS VivoBook 14 X1407CA-LY008W','index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp11.png',0),
 (297,6,1,'Laptop ASUS VivoBook 14 X1407CA-LY008W','index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp11.png',0),
 (298,9,2,'20/10','/index.php?route=product/category&amp;path=64','catalog/banner/1792772163495_8331940851636701357_g5775473049114127402_d3b73c48ee1fd3759ae611638f2e2f92.jpg',0),
-(299,9,1,'20/10','/index.php?route=product/category&amp;path=64','catalog/banner/1792772163495_8331940851636701357_g5775473049114127402_d3b73c48ee1fd3759ae611638f2e2f92.jpg',0);
+(299,9,1,'20/10','/index.php?route=product/category&amp;path=64','catalog/banner/1792772163495_8331940851636701357_g5775473049114127402_d3b73c48ee1fd3759ae611638f2e2f92.jpg',0),
+(300,7,2,'Laptop ASUS VivoBook 14 X1407CA-LY008W','/index.php?route=product/product&amp;product_id=50&amp;path=64_66','catalog/Sản phẩm/Lap/Sp1/sp1.png',0),
+(301,7,2,'MacBookAir','/index.php?route=product/product&amp;product_id=108&amp;path=64_69','catalog/Sản phẩm/Lap/sp12/macbook_air_15_relay_slide_1_7c3618691e.webp',1),
+(302,7,2,'ASUS TUF Gaming A15','/index.php?route=product/product&amp;product_id=54&amp;path=64_66','catalog/Sản phẩm/Lap/sp4/laptop_asus_tuf_gaming_a15_fa506ncg-hn329w_-_2.png',2),
+(303,7,1,'iPhone 6','index.php?route=product/product&amp;path=57&amp;product_id=49','catalog/demo/banners/iPhone6.jpg',0),
+(304,7,1,'MacBookAir','','catalog/demo/banners/MacBookAir.jpg',0);
 /*!40000 ALTER TABLE `oc_banner_image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -699,7 +700,7 @@ CREATE TABLE `oc_cart` (
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `cart_id` (`customer_id`,`session_id`,`product_id`,`subscription_plan_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -708,6 +709,10 @@ CREATE TABLE `oc_cart` (
 
 LOCK TABLES `oc_cart` WRITE;
 /*!40000 ALTER TABLE `oc_cart` DISABLE KEYS */;
+INSERT INTO `oc_cart` VALUES
+(15,0,1,'6cdb311fbf2907fa1cb0da39d9',55,0,'[]',1,'[]',NULL,'2026-11-03 10:17:18'),
+(16,0,0,'f17468a5bbe4b14b93b0818324',50,0,'{\"233\":\"40\",\"234\":\"44\"}',1,'[]',NULL,'2026-11-03 08:31:47'),
+(17,0,0,'6cdb311fbf2907fa1cb0da39d9',55,0,'[]',1,'[]',NULL,'2026-11-03 10:20:11');
 /*!40000 ALTER TABLE `oc_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2233,15 +2238,15 @@ CREATE TABLE `oc_currency` (
 LOCK TABLES `oc_currency` WRITE;
 /*!40000 ALTER TABLE `oc_currency` DISABLE KEYS */;
 INSERT INTO `oc_currency` VALUES
-(1,'Pound Sterling','GBP','£','',2,0.84385000,0,'2026-10-17 09:39:44'),
-(2,'US Dollar','USD','$','',2,1.12530000,1,'2026-10-17 09:39:44'),
-(3,'Euro','EUR','','€',2,1.00000000,0,'2026-10-17 09:39:44'),
-(4,'Hong Kong Dollar','HKD','HK$','',2,8.83160000,0,'2026-10-17 09:39:44'),
-(5,'Indian Rupee','INR','₹','',2,106.86400000,0,'2026-10-17 09:39:44'),
+(1,'Pound Sterling','GBP','£','',2,0.83580000,0,'2026-11-03 10:08:40'),
+(2,'US Dollar','USD','$','',2,1.12160000,1,'2026-11-03 10:08:40'),
+(3,'Euro','EUR','','€',2,1.00000000,0,'2026-11-03 10:08:40'),
+(4,'Hong Kong Dollar','HKD','HK$','',2,8.80020000,0,'2026-11-03 10:08:40'),
+(5,'Indian Rupee','INR','₹','',2,106.45050000,0,'2026-11-03 10:08:40'),
 (6,'Russian Ruble','RUB','','₽',2,56.40360000,0,'2018-02-16 12:00:00'),
-(7,'Chinese Yuan Renminbi','CNY','¥','',2,7.52400000,0,'2026-10-17 09:39:44'),
-(8,'Australian Dollar','AUD','$','',2,1.61710000,0,'2026-10-17 09:39:44'),
-(9,'VNĐ','vnd','','đ',0,1.00000000,1,'2026-10-17 09:39:44');
+(7,'Chinese Yuan Renminbi','CNY','¥','',2,7.45670000,0,'2026-11-03 10:08:40'),
+(8,'Australian Dollar','AUD','$','',2,1.60040000,0,'2026-11-03 10:08:40'),
+(9,'VNĐ','vnd','','đ',0,1.00000000,1,'2026-11-03 10:08:40');
 /*!40000 ALTER TABLE `oc_currency` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2602,7 +2607,7 @@ CREATE TABLE `oc_customer` (
 LOCK TABLES `oc_customer` WRITE;
 /*!40000 ALTER TABLE `oc_customer` DISABLE KEYS */;
 INSERT INTO `oc_customer` VALUES
-(1,1,0,2,'1','1','1@gmail.com','','$2y$10$QMuE8kZ6Nw861MQclSGyKe6BSDv/IBaEx.l0CbTPOFkB8/fDNdp3S','[]',1,'172.20.0.1',1,0,0,NULL,NULL,'2026-10-13 10:05:23'),
+(1,1,0,2,'1','1','1@gmail.com','','$2y$10$QMuE8kZ6Nw861MQclSGyKe6BSDv/IBaEx.l0CbTPOFkB8/fDNdp3S','[]',1,'172.19.0.1',1,0,0,NULL,NULL,'2026-10-13 10:05:23'),
 (2,2,0,2,'nguyen','trong','trnguyen@gmail.com','','$2y$10$Ejy4andilcGJuWh77ugtyu1fTtzLjEYYcAg/AV4lvtJm9emzpO8Z2','[]',0,NULL,1,0,0,NULL,NULL,'2026-10-16 18:19:01'),
 (3,4,0,2,'Trong','nguyen','12222@gmail.com','','$2y$10$mLbJnbZloA79xrmydsc/SO08gGuUfu93Ri6O2wcZha6g.JR3jrcmG','[]',0,NULL,1,0,0,NULL,NULL,'2026-10-16 18:19:37'),
 (4,4,0,2,'nguyen','bruh','bruh@gmail.com','111','$2y$10$XAO0DLmi24cEiU1UrH109O8EDushyMy6kiSEtKwaEl65uf3EY/1Xi','[]',0,NULL,1,0,0,NULL,NULL,'2026-10-16 18:20:11'),
@@ -2875,7 +2880,7 @@ CREATE TABLE `oc_customer_ip` (
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`customer_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2885,7 +2890,8 @@ CREATE TABLE `oc_customer_ip` (
 LOCK TABLES `oc_customer_ip` WRITE;
 /*!40000 ALTER TABLE `oc_customer_ip` DISABLE KEYS */;
 INSERT INTO `oc_customer_ip` VALUES
-(1,1,0,'127.0.0.1','','2026-10-17 09:37:42');
+(1,1,0,'127.0.0.1','','2026-10-17 09:37:42'),
+(2,1,0,'172.19.0.1','','2026-11-03 08:17:50');
 /*!40000 ALTER TABLE `oc_customer_ip` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2906,7 +2912,7 @@ CREATE TABLE `oc_customer_login` (
   PRIMARY KEY (`customer_login_id`),
   KEY `email` (`email`),
   KEY `ip` (`ip`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3244,7 +3250,7 @@ CREATE TABLE `oc_extension` (
   `type` varchar(32) DEFAULT NULL,
   `code` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`extension_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3302,7 +3308,9 @@ INSERT INTO `oc_extension` VALUES
 (46,'opencart','shipping','weight'),
 (47,'opencart','shipping','pickup'),
 (48,'opencart','module','bestseller'),
-(49,'opencart','module','html');
+(49,'opencart','module','html'),
+(50,'opencart','module','special'),
+(51,'opencart','module','blog');
 /*!40000 ALTER TABLE `oc_extension` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4153,7 +4161,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) DEFAULT NULL,
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4165,12 +4173,13 @@ LOCK TABLES `oc_layout_module` WRITE;
 INSERT INTO `oc_layout_module` VALUES
 (1,10,'opencart.account','column_right',1),
 (2,6,'opencart.account','column_right',1),
-(3,1,'opencart.featured.2','content_top',2),
 (4,3,'opencart.banner.1','column_left',2),
-(5,1,'opencart.banner.3','content_top',1),
-(6,1,'opencart.banner.4','content_bottom',1),
 (7,3,'opencart.category','column_left',1),
-(8,14,'opencart.topic','column_left',1);
+(8,14,'opencart.topic','column_left',1),
+(13,1,'opencart.banner.3','content_top',0),
+(14,1,'opencart.featured.2','content_top',1),
+(15,1,'opencart.special.7','content_top',2),
+(16,1,'opencart.banner.4','content_bottom',1);
 /*!40000 ALTER TABLE `oc_layout_module` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4187,7 +4196,7 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) DEFAULT 0,
   `route` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4201,7 +4210,6 @@ INSERT INTO `oc_layout_route` VALUES
 (2,6,0,'information/gdpr'),
 (3,10,0,'affiliate/%'),
 (4,3,0,'product/category'),
-(5,1,0,'common/home'),
 (6,2,0,'product/product'),
 (7,11,0,'information/information'),
 (8,7,0,'checkout/%'),
@@ -4212,7 +4220,8 @@ INSERT INTO `oc_layout_route` VALUES
 (13,12,0,'product/compare'),
 (14,13,0,'product/search'),
 (15,14,0,'cms/blog'),
-(16,14,0,'cms/blog.info');
+(16,14,0,'cms/blog.info'),
+(18,1,0,'common/home');
 /*!40000 ALTER TABLE `oc_layout_route` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4502,7 +4511,7 @@ CREATE TABLE `oc_module` (
   `code` varchar(64) DEFAULT NULL,
   `setting` text DEFAULT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4517,7 +4526,9 @@ INSERT INTO `oc_module` VALUES
 (3,'Homepage Slideshow','opencart.banner','{\"name\":\"Homepage Slideshow\",\"banner_id\":\"7\",\"effect\":\"slide\",\"items\":\"1\",\"controls\":\"1\",\"indicators\":\"1\",\"interval\":\"5000\",\"width\":\"1140\",\"height\":\"380\",\"status\":\"1\"}'),
 (4,'Homepage Manufacturers','opencart.banner','{\"name\":\"Homepage Manufacturers\",\"banner_id\":\"8\",\"effect\":\"slide\",\"items\":\"5\",\"controls\":\"1\",\"indicators\":\"1\",\"interval\":\"5000\",\"width\":\"130\",\"height\":\"100\",\"status\":\"1\"}'),
 (5,'Banner sự kiện 20/11','opencart.banner','{\"name\":\"Banner s\\u1ef1 ki\\u1ec7n 20\\/11\",\"banner_id\":\"9\",\"effect\":\"slide\",\"items\":\"1\",\"controls\":\"1\",\"indicators\":\"1\",\"interval\":\"5000\",\"width\":\"1140\",\"height\":\"380\",\"status\":\"1\",\"module_id\":\"0\"}'),
-(6,'Sản phẩm nổi bật 2','opencart.featured','{\"name\":\"S\\u1ea3n ph\\u1ea9m n\\u1ed5i b\\u1eadt 2\",\"product\":[\"49\",\"73\",\"78\",\"80\",\"85\"],\"axis\":\"vertical\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"6\"}');
+(6,'Sản phẩm nổi bật 2','opencart.featured','{\"name\":\"S\\u1ea3n ph\\u1ea9m n\\u1ed5i b\\u1eadt 2\",\"product\":[\"49\",\"73\",\"78\",\"80\",\"85\"],\"axis\":\"vertical\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"6\"}'),
+(7,'Khuyến mãi đặc biệt','opencart.special','{\"name\":\"Khuy\\u1ebfn m\\u00e3i \\u0111\\u1eb7c bi\\u1ec7t\",\"axis\":\"horizontal\",\"limit\":\"8\",\"width\":\"200\",\"height\":\"200\",\"status\":\"1\",\"module_id\":\"7\"}'),
+(8,'Blog','opencart.blog','{\"name\":\"Blog\",\"limit\":\"5\",\"width\":\"200\",\"height\":\"200\",\"order\":\"DESC\",\"sort\":\"ad.name\",\"status\":\"1\",\"module_id\":\"0\"}');
 /*!40000 ALTER TABLE `oc_module` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4864,7 +4875,7 @@ CREATE TABLE `oc_order` (
   `date_modified` datetime DEFAULT NULL,
   PRIMARY KEY (`order_id`),
   KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4878,7 +4889,9 @@ INSERT INTO `oc_order` VALUES
 (2,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost/TechStation/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"name\":\"Cash On Delivery\",\"code\":\"cod.cod\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"name\":\"Flat Shipping Rate\",\"code\":\"flat.flat\",\"cost\":50000,\"tax_class_id\":0,\"text\":\"50,000\\u0111\"}','',23640000.0000,0,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0','en-US,en;q=0.9','2026-10-13 10:10:18','2026-10-13 10:10:47'),
 (3,0,1,'INV-2026-00',NULL,0,'Tech Station','http://localhost/TechStation/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"bank_transfer.bank_transfer\",\"name\":\"Bank Transfer\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"weight.weight_7\",\"name\":\"To\\u00e0n Qu\\u1ed1c (Weight: 1.50kg)\",\"cost\":\"10000\",\"tax_class_id\":\"0\",\"text\":\"10,000\\u0111\"}','',23600000.0000,5,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0','en-US,en;q=0.9','2026-10-13 10:11:24','2026-10-13 10:11:24'),
 (4,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost/TechStation/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"bank_transfer.bank_transfer\",\"name\":\"Bank Transfer\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"flat.flat\",\"name\":\"Flat Shipping Rate\",\"cost\":\"50000\",\"tax_class_id\":\"0\",\"text\":\"50,000\\u0111\"}','',23640000.0000,5,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0','en-US,en;q=0.9','2026-10-13 10:16:47','2026-10-13 10:16:47'),
-(5,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"name\":\"Bank Transfer\",\"code\":\"bank_transfer.bank_transfer\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"name\":\"Free Shipping\",\"code\":\"free.free\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',31778998.9000,0,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0','en-US,en;q=0.9','2026-10-17 09:38:14','2026-10-27 19:48:48');
+(5,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"name\":\"Bank Transfer\",\"code\":\"bank_transfer.bank_transfer\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"name\":\"Free Shipping\",\"code\":\"free.free\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',31778998.9000,0,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'127.0.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:158.0) Gecko/20100101 Firefox/158.0','en-US,en;q=0.9','2026-10-17 09:38:14','2026-10-27 19:48:48'),
+(6,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"cod.cod\",\"name\":\"Cash On Delivery\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"free.free\",\"name\":\"Free Shipping\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',34089000.0000,0,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'172.19.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','vi,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,vi-VN;q=0.6','2026-11-03 08:18:30','2026-11-03 08:18:30'),
+(7,0,0,'INV-2026-00',NULL,0,'Tech Station','http://localhost:8081/',1,1,'1','1','1@gmail.com','','[]',0,'','','','','','','','',0,'',0,'','[]','{\"code\":\"cod.cod\",\"name\":\"Cash On Delivery\"}',1,'1','1','1','112','','Hồ chí Minh','72000','Viet Nam',230,'Ho Chi Minh City',3780,'{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}','[]','{\"code\":\"free.free\",\"name\":\"Free Shipping\",\"cost\":0,\"tax_class_id\":0,\"text\":\"0\\u0111\"}','',34089000.0000,2,0,0.0000,0,'',2,'vi-vn',9,'vnd',1.00000000,'172.19.0.1','','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','vi,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,vi-VN;q=0.6','2026-11-03 08:18:50','2026-11-03 08:18:50');
 /*!40000 ALTER TABLE `oc_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4897,7 +4910,7 @@ CREATE TABLE `oc_order_history` (
   `comment` text DEFAULT NULL,
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`order_history_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4924,7 +4937,8 @@ INSERT INTO `oc_order_history` VALUES
 (15,5,0,0,'','2026-10-27 19:48:48'),
 (16,3,5,0,'','2026-10-27 19:50:19'),
 (17,3,5,0,'','2026-10-27 19:50:28'),
-(18,3,5,1,'','2026-10-27 19:50:39');
+(18,3,5,1,'','2026-10-27 19:50:39'),
+(19,7,2,0,'','2026-11-03 08:18:53');
 /*!40000 ALTER TABLE `oc_order_history` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4981,7 +4995,7 @@ CREATE TABLE `oc_order_product` (
   `reward` int(8) DEFAULT 0,
   PRIMARY KEY (`order_product_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4995,7 +5009,9 @@ INSERT INTO `oc_order_product` VALUES
 (5,2,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','Laptop ASUS VivoBook 14 X1407CA-LY008W',1,23590000.0000,23590000.0000,0.0000,0),
 (6,3,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','Laptop ASUS VivoBook 14 X1407CA-LY008W',1,23590000.0000,23590000.0000,0.0000,0),
 (7,4,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','Laptop ASUS VivoBook 14 X1407CA-LY008W',1,23590000.0000,23590000.0000,0.0000,0),
-(10,5,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','asusVivobook14_2',1,28889999.0000,28889999.0000,2888999.9000,240);
+(10,5,50,0,'Laptop ASUS VivoBook 14 X1407CA-LY008W','asusVivobook14_2',1,28889999.0000,28889999.0000,2888999.9000,240),
+(11,6,55,0,'Laptop ASUS Zenbook 14 UX3405CA-ST1713W','asus-zenbook14-1',1,30990000.0000,30990000.0000,3099000.0000,310),
+(12,7,55,0,'Laptop ASUS Zenbook 14 UX3405CA-ST1713W','asus-zenbook14-1',1,30990000.0000,30990000.0000,3099000.0000,310);
 /*!40000 ALTER TABLE `oc_order_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5108,7 +5124,7 @@ CREATE TABLE `oc_order_total` (
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`order_total_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5134,7 +5150,15 @@ INSERT INTO `oc_order_total` VALUES
 (33,5,'opencart','sub_total','text_sub_total',28889999.0000,1),
 (34,5,'opencart','shipping','Free Shipping',0.0000,3),
 (35,5,'opencart','tax','VAT 10%',2888999.9000,5),
-(36,5,'opencart','total','text_total',31778998.9000,9);
+(36,5,'opencart','total','text_total',31778998.9000,9),
+(37,6,'opencart','sub_total','Sub-Total',30990000.0000,1),
+(38,6,'opencart','shipping','Free Shipping',0.0000,3),
+(39,6,'opencart','tax','VAT 10%',3099000.0000,5),
+(40,6,'opencart','total','Total',34089000.0000,9),
+(41,7,'opencart','sub_total','Sub-Total',30990000.0000,1),
+(42,7,'opencart','shipping','Free Shipping',0.0000,3),
+(43,7,'opencart','tax','VAT 10%',3099000.0000,5),
+(44,7,'opencart','total','Total',34089000.0000,9);
 /*!40000 ALTER TABLE `oc_order_total` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5212,9 +5236,9 @@ INSERT INTO `oc_product` VALUES
 (49,0,'SAM1','','','','','','','','','',50,8,'catalog/demo/samsung_tab_1.jpg',0,1,19990000.0000,0,9,'2011-04-25',0.00000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2011-04-26 08:57:34','2026-10-11 13:01:37'),
 (50,0,'asusVivobook14_2',NULL,NULL,NULL,NULL,NULL,NULL,'26 Phạm Văn Đồng - Hiệp Bình - Thủ Đức - Tp.Hồ Chí Minh','','',34,6,'catalog/Sản phẩm/Lap/Sp1/sp11.png',12,1,23590000.0000,24000,11,'2026-10-12',1.50000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-12 10:40:19','2026-10-15 15:39:30'),
 (51,0,'asusVivobook14_1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',32,6,'catalog/Sản phẩm/Lap/sp2/ssss_1__82 .png',12,1,22999000.0000,23999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,2,1,'2026-10-13 09:25:42','2026-10-15 15:39:13'),
-(53,0,'asusVivobook14_3',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',40,6,'catalog/Sản phẩm/test/x_m_2_43.webp',12,1,19499999.0000,19999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-13 12:37:31','2026-10-15 15:39:50'),
+(53,0,'asusVivobook14_3',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',40,6,'catalog/Sản phẩm/test/x_m_2_43.webp',12,1,19499999.0000,19999,11,'2026-10-13',1.40000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-13 12:37:31','2026-11-03 09:56:16'),
 (54,0,'asus-tuf-gaming_1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',40,6,'catalog/Sản phẩm/Lap/sp4/sssxs_69.png',12,1,25999999.0000,26000,11,'2026-10-13',2.30000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,4,1,'2026-10-13 12:53:29','2026-10-15 15:38:45'),
-(55,0,'asus-zenbook14-1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',20,6,'catalog/Sản phẩm/Lap/sp5/x_m_6__66_1.png',12,1,30990000.0000,31000,11,'2026-10-13',1.20000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,5,1,'2026-10-13 13:21:22','2026-10-15 15:41:54'),
+(55,0,'asus-zenbook14-1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',19,6,'catalog/Sản phẩm/Lap/sp5/x_m_6__66_1.png',12,1,30990000.0000,31000,11,'2026-10-13',1.20000000,1,0.00000000,0.00000000,0.00000000,1,1,1,0,5,1,'2026-10-13 13:21:22','2026-10-15 15:41:54'),
 (59,0,'iphone-duo-1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',67,6,'catalog/Sản phẩm/dth/iphone_duo_night_sky_1_e8747bb105.webp',8,1,64999999.0000,65000,11,'2026-10-13',254.00000000,2,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-13 15:02:30','2026-10-15 15:38:30'),
 (60,0,'ip-18-pm-1',NULL,NULL,NULL,NULL,NULL,NULL,'','','',20,6,'catalog/Sản phẩm/dth/sp1/iphone_18_pro_max_den_c9395ca218.webp',8,1,41990000.0000,51000,11,'2026-10-15',249.00000000,2,0.00000000,0.00000000,0.00000000,1,1,1,0,2,1,'2026-10-15 16:11:00','2026-10-15 16:49:54'),
 (61,0,'ip-air1',NULL,NULL,NULL,NULL,NULL,NULL,'12 Phạm Văn Đồng - Hiệp Bình - Thủ Đức -Tp.HCM','','',67,6,'catalog/Sản phẩm/dth/sp3/iphone_air_cloud_white_1_1086b38f61.webp',8,1,22900000.0000,23000,11,'2026-10-15',165.00000000,2,0.00000000,0.00000000,0.00000000,1,1,1,0,1,1,'2026-10-15 16:37:44','2026-10-15 16:52:28'),
@@ -6204,7 +6228,7 @@ CREATE TABLE `oc_product_discount` (
   `date_end` date DEFAULT NULL,
   PRIMARY KEY (`product_discount_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=472 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=475 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6224,7 +6248,8 @@ INSERT INTO `oc_product_discount` VALUES
 (468,73,4,5,2,57990000.0000,'F',0,'2026-10-16','2026-10-31'),
 (469,73,3,5,3,55990000.0000,'F',0,'2026-10-16','2026-10-31'),
 (470,73,5,5,4,55990000.0000,'F',0,'2026-10-16','2026-10-31'),
-(471,78,2,10,0,8990000.0000,'F',0,'2026-10-14','2026-10-31');
+(471,78,2,10,0,8990000.0000,'F',0,'2026-10-14','2026-10-31'),
+(474,53,1,100,1,19099999.0000,'F',1,'2026-11-01','2026-12-31');
 /*!40000 ALTER TABLE `oc_product_discount` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6265,7 +6290,7 @@ CREATE TABLE `oc_product_image` (
   `sort_order` int(3) DEFAULT 0,
   PRIMARY KEY (`product_image_id`),
   KEY `product_id` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2744 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2756 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6352,10 +6377,6 @@ INSERT INTO `oc_product_image` VALUES
 (2575,50,'catalog/Sản phẩm/Lap/Sp1/sp11.png',2),
 (2576,50,'catalog/Sản phẩm/Lap/Sp1/ssss_4__1_11_1.png',3),
 (2577,50,'catalog/Sản phẩm/Lap/Sp1/ssss_5__1_10_1.png',4),
-(2578,53,'catalog/Sản phẩm/test/laptop_asus_vivobook_15_x1504ma-.webp',0),
-(2579,53,'catalog/Sản phẩm/test/x_m_2_43.webp',1),
-(2580,53,'catalog/Sản phẩm/test/x_m_4__11.webp',2),
-(2581,53,'catalog/Sản phẩm/test/x_m_5__9.webp',3),
 (2598,60,'catalog/Sản phẩm/dth/sp1/iphone_18_pro_max_do_44e704f6da.webp',0),
 (2599,60,'catalog/Sản phẩm/dth/sp1/iphone_18_pro_max_xanh_279f9eb85c.webp',1),
 (2600,60,'catalog/Sản phẩm/dth/sp1/iphone_18_pro_max_bac_1c95f56cb8.webp',2),
@@ -6451,7 +6472,11 @@ INSERT INTO `oc_product_image` VALUES
 (2740,78,'catalog/Sản phẩm/dth/sp11/xiaomi_redmi_note_17_pro_max_trang_1_09bda6764d.webp',1),
 (2741,78,'catalog/Sản phẩm/dth/sp11/xiaomi_redmi_note_17_pro_max_den_1_3a8bbce5e4.webp',2),
 (2742,78,'catalog/Sản phẩm/dth/sp11/xiaomi_redmi_note_17_pro_max_tim_1_95a14533e3.webp',3),
-(2743,78,'catalog/Sản phẩm/dth/sp11/redmi_note_17_pro_max_5_5c0c697c51.webp',4);
+(2743,78,'catalog/Sản phẩm/dth/sp11/redmi_note_17_pro_max_5_5c0c697c51.webp',4),
+(2752,53,'catalog/Sản phẩm/test/laptop_asus_vivobook_15_x1504ma-.webp',0),
+(2753,53,'catalog/Sản phẩm/test/x_m_2_43.webp',1),
+(2754,53,'catalog/Sản phẩm/test/x_m_4__11.webp',2),
+(2755,53,'catalog/Sản phẩm/test/x_m_5__9.webp',3);
 /*!40000 ALTER TABLE `oc_product_image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6908,7 +6933,7 @@ CREATE TABLE `oc_product_reward` (
   `customer_group_id` int(11) DEFAULT 0,
   `points` int(8) DEFAULT 0,
   PRIMARY KEY (`product_reward_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1284 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1299 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6946,11 +6971,6 @@ INSERT INTO `oc_product_reward` VALUES
 (641,50,5,340),
 (642,50,1,240),
 (643,50,4,320),
-(644,53,2,200),
-(645,53,3,220),
-(646,53,5,240),
-(647,53,1,190),
-(648,53,4,230),
 (649,55,2,320),
 (650,55,3,340),
 (651,55,5,340),
@@ -7209,7 +7229,12 @@ INSERT INTO `oc_product_reward` VALUES
 (1280,78,3,129),
 (1281,78,5,129),
 (1282,78,1,99),
-(1283,78,4,119);
+(1283,78,4,119),
+(1294,53,2,200),
+(1295,53,3,220),
+(1296,53,5,240),
+(1297,53,1,190),
+(1298,53,4,230);
 /*!40000 ALTER TABLE `oc_product_reward` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7791,7 +7816,7 @@ CREATE TABLE `oc_seo_url` (
   KEY `language` (`language_id`),
   KEY `keyword` (`keyword`),
   KEY `query` (`key`,`value`)
-) ENGINE=InnoDB AUTO_INCREMENT=789 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=797 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -7987,8 +8012,6 @@ INSERT INTO `oc_seo_url` VALUES
 (618,0,1,'product_id','51','laptop-asus2',0),
 (619,0,2,'product_id','50','laptop-asus1',0),
 (620,0,1,'product_id','50','laptop-asus1',0),
-(621,0,2,'product_id','53','laptop-asus3',0),
-(622,0,1,'product_id','53','laptop-asus3',0),
 (623,0,2,'product_id','55','laptop-asusN',0),
 (624,0,1,'product_id','55','laptop-asusN',0),
 (643,0,2,'product_id','60','ip-18-pm1',0),
@@ -8072,7 +8095,11 @@ INSERT INTO `oc_seo_url` VALUES
 (785,0,2,'manufacturer_id','17','DELL',0),
 (786,0,1,'manufacturer_id','17','DELL',0),
 (787,0,2,'path','59_62','dien_thoai/Oppo1',0),
-(788,0,1,'path','59_62','smart_phone/Oppo1',0);
+(788,0,1,'path','59_62','smart_phone/Oppo1',0),
+(793,0,2,'product_id','53','laptop-asus3',0),
+(794,0,1,'product_id','53','laptop-asus3',0),
+(795,0,2,'topic_id','1','Blog-Iphone18',0),
+(796,0,1,'topic_id','1','Blog-Iphone18',0);
 /*!40000 ALTER TABLE `oc_seo_url` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8099,8 +8126,33 @@ CREATE TABLE `oc_session` (
 LOCK TABLES `oc_session` WRITE;
 /*!40000 ALTER TABLE `oc_session` DISABLE KEYS */;
 INSERT INTO `oc_session` VALUES
-('351cfa8783bf40f79bb5c53a19','{\"currency\":\"vnd\"}','2026-11-02 11:36:06'),
-('fa1c9ce2af87248d16cb1bb665','{\"currency\":\"vnd\"}','2026-11-02 11:35:59');
+('062b0942b2e776223798812e6b','{\"currency\":\"vnd\",\"login_token\":\"6617520aa4c41ecaa451190fad\"}','2026-11-04 01:28:19'),
+('0b539e5e146591d53b1e5c8a5c','{\"login_token\":\"fa9ef3fa31fe40fa2192c039a799bac8\"}','2026-11-04 03:16:11'),
+('11d733b37762337d9228bf7c3d','{\"currency\":\"vnd\"}','2026-11-04 01:28:23'),
+('49857e98496212ba0d82fc052b','{\"currency\":\"vnd\",\"upload_token\":\"26dda066c4cc9831edf70adeea3a9682\",\"review_token\":\"eb95523293cc8b77d8a16fe543a4d1e8\"}','2026-11-04 01:28:36'),
+('520c2eee0e778e30a984affd73','{\"currency\":\"vnd\"}','2026-11-04 01:29:22'),
+('5824c6326b47247dd13927edd5','{\"currency\":\"vnd\"}','2026-11-04 01:28:21'),
+('6abf7d0cbe70008bc7904c9a85','{\"currency\":\"vnd\"}','2026-11-04 01:16:58'),
+('6cdb311fbf2907fa1cb0da39d9','{\"currency\":\"vnd\",\"upload_token\":\"2cb8e317060603bf59fbe00ed26d85be\",\"review_token\":\"c38b2ba5762fa3cd5b52d2fd0b80f281\",\"login_token\":\"24a2f025dd3c26a41156b27e8c\"}','2026-11-04 03:20:16'),
+('789c31548b0a202778219982e9','{\"currency\":\"vnd\",\"register_token\":\"d2064606f05039a409c550520d\",\"upload_token\":\"0ca5c49affcf9e76cd692169dad9c1bb\"}','2026-11-04 01:28:20'),
+('7d2a1569eca4e597117fec9ef0','{\"currency\":\"vnd\",\"upload_token\":\"3e7eb20494782b078aff2d1153238776\",\"review_token\":\"45390d4e35a3d1f9c465e93504daf2e5\"}','2026-11-04 01:31:47'),
+('80080ad77aaa15df6e21503446','{\"currency\":\"vnd\"}','2026-11-04 01:31:38'),
+('85bd589f7aec69c362580a4261','{\"currency\":\"vnd\",\"upload_token\":\"415e9990ffc7f5aa362f6a0cc2e89852\",\"review_token\":\"0596297099f9262aba40c112f9241813\"}','2026-11-04 01:30:03'),
+('8687db68318ad77702b7a2e132','{\"currency\":\"vnd\"}','2026-11-04 01:31:29'),
+('8a3788c9591e6cc6a8afbe883e','{\"currency\":\"vnd\",\"upload_token\":\"61f4463c48ce2068d075a0921c3213ff\",\"review_token\":\"1241959b7ed0f0fd102d38ffa73f5861\"}','2026-11-04 01:38:03'),
+('90d3abaf8cd0a2c8036bf759d2','{\"currency\":\"vnd\"}','2026-11-04 01:27:43'),
+('977397e555c48d4a37371f9dbd','{\"currency\":\"vnd\"}','2026-11-04 01:28:18'),
+('b56f8d253e8117cafb13c261d8','{\"currency\":\"vnd\"}','2026-11-03 12:23:54'),
+('b7725e250d14a0592778fa77f0','{\"currency\":\"vnd\",\"return_token\":\"d9ac090006e49a24012ac1dc2a\"}','2026-11-04 01:38:12'),
+('c8ecd6a8ecb10e6fb2c3e6d68e','{\"currency\":\"vnd\"}','2026-11-04 01:28:19'),
+('cb5089687fd9fce9492517d104','{\"currency\":\"vnd\",\"login_token\":\"5d246c2ca09d44212b88e460e3\"}','2026-11-04 01:29:28'),
+('d42cc1beab142d19c124346f55','{\"currency\":\"vnd\"}','2026-11-04 01:27:36'),
+('d5fa921f88dd6893f4ca84cfae','{\"user_id\":\"1\",\"user_token\":\"7956d4a9d68e0aef974f6b376a9f1ccc\"}','2026-11-04 03:19:15'),
+('dc395103b48ad8aa36526d348c','{\"currency\":\"vnd\",\"upload_token\":\"427304fab2562cef96c5f0117f0b0ba3\",\"review_token\":\"96e620372a52abb4de6c33ae931d9a8d\"}','2026-11-04 01:39:03'),
+('eabfa1cb9065676bf72eb20697','{\"currency\":\"vnd\"}','2026-11-04 01:27:55'),
+('f17468a5bbe4b14b93b0818324','{\"currency\":\"vnd\"}','2026-11-04 01:31:48'),
+('f23c69fcdc2c4008307d2fd991','{\"currency\":\"vnd\"}','2026-11-04 01:28:18'),
+('f3a54f43f8941dbc6a9f90d0c5','{\"currency\":\"vnd\",\"upload_token\":\"bfdcdefdfe8bb58ed31bb8718407d767\",\"review_token\":\"5317d43a7f3860f8a68fdfbf7ee8cace\"}','2026-11-04 01:28:30');
 /*!40000 ALTER TABLE `oc_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8119,7 +8171,7 @@ CREATE TABLE `oc_setting` (
   `value` text DEFAULT NULL,
   `serialized` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`setting_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1671 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1953 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8232,147 +8284,6 @@ INSERT INTO `oc_setting` VALUES
 (1508,0,'shipping_weight','shipping_weight_4_status','0',0),
 (1509,0,'shipping_weight','shipping_weight_3_rate','',0),
 (1510,0,'shipping_weight','shipping_weight_3_status','0',0),
-(1517,0,'config','config_name','Tech Station',0),
-(1518,0,'config','config_theme','basic',0),
-(1519,0,'config','config_layout_id','4',0),
-(1520,0,'config','config_logo','catalog/Logo/Logo.png',0),
-(1521,0,'config','config_icon','catalog/Logo/Icon_web_1.png',0),
-(1522,0,'config','config_description','{\"2\":{\"meta_title\":\"Tech Station\",\"meta_description\":\"Tech Station\",\"meta_keyword\":\"\"},\"1\":{\"meta_title\":\"Tech Station\",\"meta_description\":\"Tech Station\",\"meta_keyword\":\"\"}}',1),
-(1523,0,'config','config_owner','Nguyễn Trọng Nguyễn',0),
-(1524,0,'config','config_address','6677 -  Phạm Văn Đồng - Hiệp Bình - Thủ Đức - TP.Hồ Chí Minh',0),
-(1525,0,'config','config_geocode','',0),
-(1526,0,'config','config_email','admin123@gmail.com',0),
-(1527,0,'config','config_telephone','0886096404',0),
-(1528,0,'config','config_image','catalog/Logo/Logo.png',0),
-(1529,0,'config','config_open','0:00 - 23:59',0),
-(1530,0,'config','config_comment','',0),
-(1531,0,'config','config_country_id','230',0),
-(1532,0,'config','config_zone_id','3780',0),
-(1533,0,'config','config_timezone','Asia/Ho_Chi_Minh',0),
-(1534,0,'config','config_language_catalog','vi-vn',0),
-(1535,0,'config','config_language_admin','vi-vn',0),
-(1536,0,'config','config_currency','vnd',0),
-(1537,0,'config','config_currency_engine','ecb',0),
-(1538,0,'config','config_currency_auto','1',0),
-(1539,0,'config','config_length_class_id','1',0),
-(1540,0,'config','config_weight_class_id','1',0),
-(1541,0,'config','config_product_description_length','100',0),
-(1542,0,'config','config_pagination','10',0),
-(1543,0,'config','config_product_count','1',0),
-(1544,0,'config','config_pagination_admin','10',0),
-(1545,0,'config','config_autocomplete_limit','5',0),
-(1546,0,'config','config_product_report_status','0',0),
-(1547,0,'config','config_review_status','1',0),
-(1548,0,'config','config_review_purchased','1',0),
-(1549,0,'config','config_review_guest','1',0),
-(1550,0,'config','config_article_description_length','600',0),
-(1551,0,'config','config_comment_status','1',0),
-(1552,0,'config','config_comment_approve','0',0),
-(1553,0,'config','config_comment_interval','',0),
-(1554,0,'config','config_cookie_id','0',0),
-(1555,0,'config','config_gdpr_id','0',0),
-(1556,0,'config','config_gdpr_limit','180',0),
-(1557,0,'config','config_tax','1',0),
-(1558,0,'config','config_tax_default','shipping',0),
-(1559,0,'config','config_tax_customer','shipping',0),
-(1560,0,'config','config_customer_online','0',0),
-(1561,0,'config','config_customer_online_expire','1',0),
-(1562,0,'config','config_customer_activity','0',0),
-(1563,0,'config','config_customer_search','0',0),
-(1564,0,'config','config_customer_group_id','1',0),
-(1565,0,'config','config_customer_group_display','[\"1\"]',1),
-(1566,0,'config','config_customer_price','0',0),
-(1567,0,'config','config_telephone_display','0',0),
-(1568,0,'config','config_telephone_required','0',0),
-(1569,0,'config','config_account_id','3',0),
-(1570,0,'config','config_2fa','0',0),
-(1571,0,'config','config_login_attempts','5',0),
-(1572,0,'config','config_password_length','6',0),
-(1573,0,'config','config_invoice_prefix','INV-2026-00',0),
-(1574,0,'config','config_cart_weight','1',0),
-(1575,0,'config','config_checkout_guest','1',0),
-(1576,0,'config','config_checkout_payment_address','0',0),
-(1577,0,'config','config_checkout_shipping_address','0',0),
-(1578,0,'config','config_checkout_id','3',0),
-(1579,0,'config','config_order_status_id','1',0),
-(1580,0,'config','config_processing_status','[\"1\",\"3\",\"12\",\"2\",\"5\"]',1),
-(1581,0,'config','config_complete_status','[\"3\",\"15\",\"5\"]',1),
-(1582,0,'config','config_failed_status_id','7',0),
-(1583,0,'config','config_void_status_id','16',0),
-(1584,0,'config','config_fraud_status_id','8',0),
-(1585,0,'config','config_api_id','1',0),
-(1586,0,'config','config_subscription_status_id','1',0),
-(1587,0,'config','config_subscription_active_status_id','2',0),
-(1588,0,'config','config_subscription_expired_status_id','3',0),
-(1589,0,'config','config_subscription_suspended_status_id','4',0),
-(1590,0,'config','config_subscription_canceled_status_id','5',0),
-(1591,0,'config','config_subscription_failed_status_id','6',0),
-(1592,0,'config','config_subscription_denied_status_id','7',0),
-(1593,0,'config','config_stock_display','1',0),
-(1594,0,'config','config_stock_warning','1',0),
-(1595,0,'config','config_stock_checkout','0',0),
-(1596,0,'config','config_stock_status_id','7',0),
-(1597,0,'config','config_affiliate_status','1',0),
-(1598,0,'config','config_affiliate_group_id','1',0),
-(1599,0,'config','config_affiliate_approval','0',0),
-(1600,0,'config','config_affiliate_auto','0',0),
-(1601,0,'config','config_affiliate_commission','5',0),
-(1602,0,'config','config_affiliate_expire','',0),
-(1603,0,'config','config_affiliate_id','4',0),
-(1604,0,'config','config_return_status_id','2',0),
-(1605,0,'config','config_return_id','0',0),
-(1606,0,'config','config_captcha','',0),
-(1607,0,'config','config_captcha_page','[\"review\",\"contact\"]',1),
-(1608,0,'config','config_image_default_width','300',0),
-(1609,0,'config','config_image_default_height','300',0),
-(1610,0,'config','config_image_category_width','300',0),
-(1611,0,'config','config_image_category_height','300',0),
-(1612,0,'config','config_image_thumb_width','500',0),
-(1613,0,'config','config_image_thumb_height','500',0),
-(1614,0,'config','config_image_popup_width','800',0),
-(1615,0,'config','config_image_popup_height','800',0),
-(1616,0,'config','config_image_product_width','250',0),
-(1617,0,'config','config_image_product_height','250',0),
-(1618,0,'config','config_image_additional_width','74',0),
-(1619,0,'config','config_image_additional_height','74',0),
-(1620,0,'config','config_image_related_width','250',0),
-(1621,0,'config','config_image_related_height','250',0),
-(1622,0,'config','config_image_article_width','1140',0),
-(1623,0,'config','config_image_article_height','380',0),
-(1624,0,'config','config_image_topic_width','1140',0),
-(1625,0,'config','config_image_topic_height','380',0),
-(1626,0,'config','config_image_compare_width','90',0),
-(1627,0,'config','config_image_compare_height','90',0),
-(1628,0,'config','config_image_wishlist_width','47',0),
-(1629,0,'config','config_image_wishlist_height','47',0),
-(1630,0,'config','config_image_cart_width','47',0),
-(1631,0,'config','config_image_cart_height','47',0),
-(1632,0,'config','config_image_location_width','268',0),
-(1633,0,'config','config_image_location_height','268',0),
-(1634,0,'config','config_mail_engine','',0),
-(1635,0,'config','config_mail_parameter','',0),
-(1636,0,'config','config_mail_smtp_hostname','',0),
-(1637,0,'config','config_mail_smtp_username','',0),
-(1638,0,'config','config_mail_smtp_password','',0),
-(1639,0,'config','config_mail_smtp_port','25',0),
-(1640,0,'config','config_mail_smtp_timeout','5',0),
-(1641,0,'config','config_mail_alert','[\"order\"]',1),
-(1642,0,'config','config_mail_alert_email','',0),
-(1643,0,'config','config_maintenance','0',0),
-(1644,0,'config','config_session_expire','86400',0),
-(1645,0,'config','config_session_samesite','Strict',0),
-(1646,0,'config','config_seo_url','0',0),
-(1647,0,'config','config_compression','0',0),
-(1648,0,'config','config_user_2fa','0',0),
-(1649,0,'config','config_2fa_expire','90',0),
-(1650,0,'config','config_user_password_length','',0),
-(1651,0,'config','config_shared','0',0),
-(1652,0,'config','config_file_max_size','20',0),
-(1653,0,'config','config_file_ext_allowed','zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\nwebp\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nmp4\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc',0),
-(1654,0,'config','config_file_mime_allowed','text/plain\r\nimage/png\r\nimage/webp\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-zip\r\napplication/x-zip-compressed\r\napplication/rar\r\napplication/x-rar\r\napplication/x-rar-compressed\r\napplication/octet-stream\r\naudio/mpeg\r\nvideo/mp4\r\nvideo/quicktime\r\napplication/pdf',0),
-(1655,0,'config','config_error_display','1',0),
-(1656,0,'config','config_error_log','1',0),
-(1657,0,'config','config_error_filename','error.log',0),
 (1658,0,'payment_free_checkout','payment_free_checkout_order_status_id','1',0),
 (1659,0,'payment_free_checkout','payment_free_checkout_status','0',0),
 (1660,0,'payment_free_checkout','payment_free_checkout_sort_order','2',0),
@@ -8385,7 +8296,148 @@ INSERT INTO `oc_setting` VALUES
 (1667,0,'payment_cod','payment_cod_order_status_id','2',0),
 (1668,0,'payment_cod','payment_cod_geo_zone_id','7',0),
 (1669,0,'payment_cod','payment_cod_status','1',0),
-(1670,0,'payment_cod','payment_cod_sort_order','1',0);
+(1670,0,'payment_cod','payment_cod_sort_order','1',0),
+(1812,0,'config','config_name','Tech Station',0),
+(1813,0,'config','config_theme','basic',0),
+(1814,0,'config','config_layout_id','4',0),
+(1815,0,'config','config_logo','catalog/Logo/Logo.png',0),
+(1816,0,'config','config_icon','catalog/Logo/Icon_web_1.png',0),
+(1817,0,'config','config_description','{\"2\":{\"meta_title\":\"Tech Station\",\"meta_description\":\"Tech Station\",\"meta_keyword\":\"\"},\"1\":{\"meta_title\":\"Tech Station\",\"meta_description\":\"Tech Station\",\"meta_keyword\":\"\"}}',1),
+(1818,0,'config','config_owner','Nguyễn Trọng Nguyễn',0),
+(1819,0,'config','config_address','6677 -  Phạm Văn Đồng - Hiệp Bình - Thủ Đức - TP.Hồ Chí Minh',0),
+(1820,0,'config','config_geocode','',0),
+(1821,0,'config','config_email','admin123@gmail.com',0),
+(1822,0,'config','config_telephone','0886096404',0),
+(1823,0,'config','config_image','catalog/Logo/Logo.png',0),
+(1824,0,'config','config_open','0:00 - 23:59',0),
+(1825,0,'config','config_comment','',0),
+(1826,0,'config','config_country_id','230',0),
+(1827,0,'config','config_zone_id','3780',0),
+(1828,0,'config','config_timezone','Asia/Ho_Chi_Minh',0),
+(1829,0,'config','config_language_catalog','vi-vn',0),
+(1830,0,'config','config_language_admin','vi-vn',0),
+(1831,0,'config','config_currency','vnd',0),
+(1832,0,'config','config_currency_engine','ecb',0),
+(1833,0,'config','config_currency_auto','1',0),
+(1834,0,'config','config_length_class_id','1',0),
+(1835,0,'config','config_weight_class_id','1',0),
+(1836,0,'config','config_product_description_length','100',0),
+(1837,0,'config','config_pagination','10',0),
+(1838,0,'config','config_product_count','1',0),
+(1839,0,'config','config_pagination_admin','10',0),
+(1840,0,'config','config_autocomplete_limit','5',0),
+(1841,0,'config','config_product_report_status','0',0),
+(1842,0,'config','config_review_status','1',0),
+(1843,0,'config','config_review_purchased','1',0),
+(1844,0,'config','config_review_guest','1',0),
+(1845,0,'config','config_article_description_length','600',0),
+(1846,0,'config','config_comment_status','1',0),
+(1847,0,'config','config_comment_approve','0',0),
+(1848,0,'config','config_comment_interval','',0),
+(1849,0,'config','config_cookie_id','0',0),
+(1850,0,'config','config_gdpr_id','0',0),
+(1851,0,'config','config_gdpr_limit','180',0),
+(1852,0,'config','config_tax','1',0),
+(1853,0,'config','config_tax_default','shipping',0),
+(1854,0,'config','config_tax_customer','shipping',0),
+(1855,0,'config','config_customer_online','0',0),
+(1856,0,'config','config_customer_online_expire','1',0),
+(1857,0,'config','config_customer_activity','0',0),
+(1858,0,'config','config_customer_search','0',0),
+(1859,0,'config','config_customer_group_id','1',0),
+(1860,0,'config','config_customer_group_display','[\"1\"]',1),
+(1861,0,'config','config_customer_price','0',0),
+(1862,0,'config','config_telephone_display','0',0),
+(1863,0,'config','config_telephone_required','0',0),
+(1864,0,'config','config_account_id','3',0),
+(1865,0,'config','config_2fa','0',0),
+(1866,0,'config','config_login_attempts','5',0),
+(1867,0,'config','config_password_length','6',0),
+(1868,0,'config','config_invoice_prefix','INV-2026-00',0),
+(1869,0,'config','config_cart_weight','1',0),
+(1870,0,'config','config_checkout_guest','1',0),
+(1871,0,'config','config_checkout_payment_address','0',0),
+(1872,0,'config','config_checkout_shipping_address','0',0),
+(1873,0,'config','config_checkout_id','3',0),
+(1874,0,'config','config_order_status_id','1',0),
+(1875,0,'config','config_processing_status','[\"1\",\"3\",\"12\",\"2\",\"5\"]',1),
+(1876,0,'config','config_complete_status','[\"3\",\"15\",\"5\"]',1),
+(1877,0,'config','config_failed_status_id','7',0),
+(1878,0,'config','config_void_status_id','16',0),
+(1879,0,'config','config_fraud_status_id','8',0),
+(1880,0,'config','config_api_id','1',0),
+(1881,0,'config','config_subscription_status_id','1',0),
+(1882,0,'config','config_subscription_active_status_id','2',0),
+(1883,0,'config','config_subscription_expired_status_id','3',0),
+(1884,0,'config','config_subscription_suspended_status_id','4',0),
+(1885,0,'config','config_subscription_canceled_status_id','5',0),
+(1886,0,'config','config_subscription_failed_status_id','6',0),
+(1887,0,'config','config_subscription_denied_status_id','7',0),
+(1888,0,'config','config_stock_display','1',0),
+(1889,0,'config','config_stock_warning','1',0),
+(1890,0,'config','config_stock_checkout','0',0),
+(1891,0,'config','config_stock_status_id','7',0),
+(1892,0,'config','config_affiliate_status','1',0),
+(1893,0,'config','config_affiliate_group_id','1',0),
+(1894,0,'config','config_affiliate_approval','0',0),
+(1895,0,'config','config_affiliate_auto','0',0),
+(1896,0,'config','config_affiliate_commission','5',0),
+(1897,0,'config','config_affiliate_expire','',0),
+(1898,0,'config','config_affiliate_id','4',0),
+(1899,0,'config','config_return_status_id','2',0),
+(1900,0,'config','config_return_id','0',0),
+(1901,0,'config','config_captcha','',0),
+(1902,0,'config','config_captcha_page','[\"review\",\"contact\"]',1),
+(1903,0,'config','config_image_default_width','300',0),
+(1904,0,'config','config_image_default_height','300',0),
+(1905,0,'config','config_image_category_width','300',0),
+(1906,0,'config','config_image_category_height','300',0),
+(1907,0,'config','config_image_thumb_width','500',0),
+(1908,0,'config','config_image_thumb_height','500',0),
+(1909,0,'config','config_image_popup_width','800',0),
+(1910,0,'config','config_image_popup_height','800',0),
+(1911,0,'config','config_image_product_width','250',0),
+(1912,0,'config','config_image_product_height','250',0),
+(1913,0,'config','config_image_additional_width','74',0),
+(1914,0,'config','config_image_additional_height','74',0),
+(1915,0,'config','config_image_related_width','250',0),
+(1916,0,'config','config_image_related_height','250',0),
+(1917,0,'config','config_image_article_width','1140',0),
+(1918,0,'config','config_image_article_height','380',0),
+(1919,0,'config','config_image_topic_width','1140',0),
+(1920,0,'config','config_image_topic_height','380',0),
+(1921,0,'config','config_image_compare_width','90',0),
+(1922,0,'config','config_image_compare_height','90',0),
+(1923,0,'config','config_image_wishlist_width','47',0),
+(1924,0,'config','config_image_wishlist_height','47',0),
+(1925,0,'config','config_image_cart_width','47',0),
+(1926,0,'config','config_image_cart_height','47',0),
+(1927,0,'config','config_image_location_width','268',0),
+(1928,0,'config','config_image_location_height','268',0),
+(1929,0,'config','config_mail_engine','',0),
+(1930,0,'config','config_mail_parameter','',0),
+(1931,0,'config','config_mail_smtp_hostname','',0),
+(1932,0,'config','config_mail_smtp_username','',0),
+(1933,0,'config','config_mail_smtp_password','',0),
+(1934,0,'config','config_mail_smtp_port','25',0),
+(1935,0,'config','config_mail_smtp_timeout','5',0),
+(1936,0,'config','config_mail_alert','[\"order\"]',1),
+(1937,0,'config','config_mail_alert_email','',0),
+(1938,0,'config','config_maintenance','0',0),
+(1939,0,'config','config_session_expire','86400',0),
+(1940,0,'config','config_session_samesite','Strict',0),
+(1941,0,'config','config_seo_url','1',0),
+(1942,0,'config','config_compression','0',0),
+(1943,0,'config','config_user_2fa','0',0),
+(1944,0,'config','config_2fa_expire','90',0),
+(1945,0,'config','config_user_password_length','',0),
+(1946,0,'config','config_shared','0',0),
+(1947,0,'config','config_file_max_size','20',0),
+(1948,0,'config','config_file_ext_allowed','zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\nwebp\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nmp4\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc',0),
+(1949,0,'config','config_file_mime_allowed','text/plain\r\nimage/png\r\nimage/webp\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-zip\r\napplication/x-zip-compressed\r\napplication/rar\r\napplication/x-rar\r\napplication/x-rar-compressed\r\napplication/octet-stream\r\naudio/mpeg\r\nvideo/mp4\r\nvideo/quicktime\r\napplication/pdf',0),
+(1950,0,'config','config_error_display','1',0),
+(1951,0,'config','config_error_log','1',0),
+(1952,0,'config','config_error_filename','error.log',0);
 /*!40000 ALTER TABLE `oc_setting` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8438,8 +8490,8 @@ CREATE TABLE `oc_statistics` (
 LOCK TABLES `oc_statistics` WRITE;
 /*!40000 ALTER TABLE `oc_statistics` DISABLE KEYS */;
 INSERT INTO `oc_statistics` VALUES
-(1,'order_sale',102658998.9000),
-(2,'order_processing',3.0000),
+(1,'order_sale',136747998.9000),
+(2,'order_processing',4.0000),
 (3,'order_complete',3.0000),
 (4,'order_other',0.0000),
 (5,'returns',0.0000),
@@ -8940,7 +8992,7 @@ CREATE TABLE `oc_topic` (
   `sort_order` int(3) DEFAULT 0,
   `status` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`topic_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8949,6 +9001,8 @@ CREATE TABLE `oc_topic` (
 
 LOCK TABLES `oc_topic` WRITE;
 /*!40000 ALTER TABLE `oc_topic` DISABLE KEYS */;
+INSERT INTO `oc_topic` VALUES
+(1,0,1);
 /*!40000 ALTER TABLE `oc_topic` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8979,6 +9033,9 @@ CREATE TABLE `oc_topic_description` (
 
 LOCK TABLES `oc_topic_description` WRITE;
 /*!40000 ALTER TABLE `oc_topic_description` DISABLE KEYS */;
+INSERT INTO `oc_topic_description` VALUES
+(1,1,'Iphone 18 ProMax','&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;\r\n  &lt;style type=&quot;text/css&quot;&gt;\r\n    body {\r\n      font-family: \'Roboto\', sans-serif;\r\n      background-color: #f1f5f9;\r\n      color: #1e293b;\r\n      margin: 0;\r\n      padding: 30px 15px;\r\n    }\r\n    .container {\r\n      max-width: 900px;\r\n      margin: 0 auto;\r\n    }\r\n    .blog-card {\r\n      background: #ffffff;\r\n      border-radius: 12px;\r\n      box-shadow: 0 4px 20px rgba(0,0,0,0.06);\r\n      padding: 40px;\r\n      margin-bottom: 50px;\r\n    }\r\n    h1.blog-title {\r\n      font-size: 28px;\r\n      font-weight: 700;\r\n      color: #1a56db;\r\n      margin-top: 0;\r\n      margin-bottom: 10px;\r\n      line-height: 1.3;\r\n    }\r\n    .blog-meta {\r\n      font-size: 14px;\r\n      color: #64748b;\r\n      font-style: italic;\r\n      margin-bottom: 25px;\r\n    }\r\n    .blog-image {\r\n      width: 100%;\r\n      border-radius: 8px;\r\n      display: block;\r\n      margin: 0 auto 10px auto;\r\n    }\r\n    .image-caption {\r\n      text-align: center;\r\n      font-size: 14px;\r\n      color: #64748b;\r\n      font-style: italic;\r\n      margin-bottom: 25px;\r\n    }\r\n    p {\r\n      text-indent: 30px;\r\n      font-size: 20px;\r\n      margin: 0px 0px 12px 0px;\r\n      line-height: 1.6;\r\n    }\r\n    h2 {\r\n      font-size: 22px;\r\n      font-weight: 500;\r\n      opacity: 0.85;\r\n      color: #2c3e50;\r\n      margin-top: 28px;\r\n      margin-bottom: 12px;\r\n    }\r\n    .specs-table {\r\n      width: 100%;\r\n      border-collapse: collapse;\r\n      margin: 20px 0 25px 0;\r\n      font-size: 16px;\r\n    }\r\n    .specs-table th {\r\n      background-color: #1a56db;\r\n      color: #ffffff;\r\n      padding: 12px 16px;\r\n      text-align: left;\r\n      font-weight: 500;\r\n    }\r\n    .specs-table td {\r\n      padding: 12px 16px;\r\n      border-bottom: 1px solid #e2e8f0;\r\n    }\r\n    .specs-table tr:nth-child(even) {\r\n      background-color: #f8fafc;\r\n    }\r\n    .specs-table td:first-child {\r\n      font-weight: 500;\r\n      color: #1e293b;\r\n      width: 35%;\r\n    }\r\n    .end-of-blog-marker {\r\n      margin-top: 35px;\r\n      padding: 20px 24px;\r\n      background-color: #f1f5f9;\r\n      border: 2px solid #1a56db;\r\n      border-radius: 8px;\r\n      text-align: center;\r\n    }\r\n    .marker-title {\r\n      font-size: 16px;\r\n      font-weight: 700;\r\n      color: #1a56db;\r\n      letter-spacing: 0.5px;\r\n      margin-bottom: 6px;\r\n    }\r\n    .marker-sub {\r\n      font-size: 14px;\r\n      color: #475569;\r\n      font-style: italic;\r\n      margin-bottom: 4px;\r\n    }\r\n    .marker-copy {\r\n      font-size: 12px;\r\n      color: #94a3b8;\r\n    }\r\n  &lt;/style&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n  &lt;div class=&quot;container&quot;&gt;\r\n    &lt;article class=&quot;blog-card&quot;&gt;\r\n      &lt;h1 class=&quot;blog-title&quot;&gt;iPhone 18 Pro Max Review: The All-Powerful AI Era &amp; the Future Benchmark of Smartphones&lt;/h1&gt;\r\n      &lt;div class=&quot;blog-meta&quot;&gt;Tech Station Review &amp;bull; Apple Flagship Review &amp;bull; Updated: 2026&lt;/div&gt;\r\n      &lt;img src=&quot;processed_images/iphone_18_promax.jpg&quot; alt=&quot;iPhone 18 Pro Max&quot; class=&quot;blog-image&quot; /&gt;\r\n      &lt;div class=&quot;image-caption&quot;&gt;Figure 1: iPhone 18 Pro Max featuring an edge-to-edge bezel-less display and under-display Face ID technology at Tech Station.&lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;p&gt;Welcome to Tech Station. If you are looking for the pinnacle of mobile technology and want to discover the breakthroughs packed inside Apple\'s ultimate flagship, this review provides a comprehensive analysis of the iPhone 18 Pro Max—a masterpiece redefining the premium smartphone market this year. At Tech Station, we consistently deliver the earliest and most accurate tech insights to help you make well-informed investment decisions.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;1. Overview and Product Positioning:&lt;/h2&gt;\r\n        &lt;p&gt;The iPhone 18 Pro Max stands as the definitive pinnacle of Apple\'s flagship smartphone portfolio. Rather than being merely an annual hardware iteration, this device marks a historic shift toward hardware engineered from the ground up for artificial intelligence (Apple Intelligence 2.0).&lt;/p&gt;\r\n        &lt;p&gt;Engineered for high-end consumers, enterprise professionals, creative experts, and tech enthusiasts who demand the absolute ultimate experience, the iPhone 18 Pro Max establishes a brand-new standard for both raw compute performance and aesthetic refinement.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;2. Next-Generation Unibody Titanium &amp; Bezel-Free Display:&lt;/h2&gt;\r\n        &lt;p&gt;Apple continues to refine its design language using a 3rd-generation titanium alloy frame (Grade 5 Titanium Plus), precision-machined with advanced laser-cutting technology to make the device 12% lighter while boosting impact shock resistance by 25% compared to the prior generation.&lt;/p&gt;\r\n        &lt;p&gt;Crucially, the display bezels on the iPhone 18 Pro Max have virtually vanished thanks to sub-1mm ultra-thin display routing circuitry. The rear chassis incorporates Ceramic Shield Pro matte glass, completely eliminating fingerprint smudges while delivering a reassuringly solid, luxurious in-hand feel.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;3. Tandem OLED ProMotion Display &amp; Under-Display Face ID:&lt;/h2&gt;\r\n        &lt;p&gt;For the first time on an iPhone, Apple has seamlessly embedded the entire Face ID sensor array beneath the active display layer. The Dynamic Island cutout has been reduced to an ultra-compact front-camera punch-hole that intelligently conceals itself during full-screen video playback.&lt;/p&gt;\r\n        &lt;p&gt;The next-generation dual Tandem OLED panel reaches an astonishing peak brightness of up to 3,200 nits under direct sunlight, paired with an adaptive ProMotion refresh rate spanning 1Hz to 144Hz. From fluid scrolling and high-frame-rate gaming to mastering HDR Dolby Vision media, visuals remain vibrant and razor-sharp down to the smallest detail.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;4. Boundary-Pushing Performance with the 2nm Apple A20 Pro:&lt;/h2&gt;\r\n        &lt;p&gt;At the heart of the iPhone 18 Pro Max lies the Apple A20 Pro processor, fabricated on TSMC’s state-of-the-art 2nm node. Its next-generation 6-core CPU and 6-core GPU architecture yields a 35% leap in graphical rendering performance while reducing power draw by 25%.&lt;/p&gt;\r\n        &lt;p&gt;Crucially, the upgraded 16-core Neural Engine delivers an immense 45 TOPS of computational throughput, enabling fully localized execution of large language models (LLMs) and Apple Intelligence 2.0 tasks directly on-device without cloud routing, preserving absolute data privacy.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;5. Breakthrough 200MP Periscope Camera &amp; Spatial Capture:&lt;/h2&gt;\r\n        &lt;p&gt;The rear camera module has undergone a sweeping overhaul, headlined by a 200MP Fusion primary sensor featuring a variable f/1.4 - f/2.8 aperture for unparalleled low-light exposure and dynamic range.&lt;/p&gt;\r\n        &lt;p&gt;The next-generation Tetraprism periscope telephoto lens enables continuous optical zoom from 5x up to 10x, extending to 100x digital zoom powered by AI-driven super-resolution algorithms. The system also supports 8K 60fps Spatial Video capture, perfectly optimized for playback on Apple Vision Pro.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;6. Two-Day Battery Life &amp; MagSafe 2.0 Fast Charging:&lt;/h2&gt;\r\n        &lt;p&gt;Armed with a substantial 5,000 mAh battery cell alongside graphene vapor-chamber thermal dissipation and the highly efficient 2nm architecture, the iPhone 18 Pro Max reliably provides up to 33 hours of continuous streamed video playback.&lt;/p&gt;\r\n        &lt;p&gt;The 45W wired fast-charging system replenishes up to 50% capacity in just 20 minutes. Meanwhile, the new 25W MagSafe 2.0 wireless charging solution features ultra-secure magnetic alignment and active thermal moderation to prevent device overheating during sustained charges.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;7. Hyper-Personalized Apple Intelligence 2.0:&lt;/h2&gt;\r\n        &lt;p&gt;Powered by Apple Intelligence 2.0, Siri has evolved into a contextual digital partner deeply attuned to your daily workflows. Siri can locate specific photos instantly, synthesize long email threads, and coordinate multi-step personal schedules based on contextual routines.&lt;/p&gt;\r\n        &lt;p&gt;Creative generation utilities—including Genmoji, Image Playground, and the Clean Up object removal tool—have received massive algorithmic enhancements, delivering unprecedented day-to-day productivity.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;8. Official Specifications: iPhone 18 Pro Max:&lt;/h2&gt;\r\n        &lt;table class=&quot;specs-table&quot;&gt;\r\n          &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Specification&lt;/th&gt;&lt;th&gt;Details&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;\r\n          &lt;tbody&gt;\r\n            &lt;tr&gt;&lt;td&gt;Display&lt;/td&gt;&lt;td&gt;6.9-inch Super Retina XDR Tandem OLED, 1-144Hz, 3200 nits&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Processor (CPU)&lt;/td&gt;&lt;td&gt;Apple A20 Pro (Industry-leading 2nm process)&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Memory (RAM)&lt;/td&gt;&lt;td&gt;12GB LPDDR5X optimized for on-device AI&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Storage (ROM)&lt;/td&gt;&lt;td&gt;256GB / 512GB / 1TB / 2TB NVMe&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Rear Cameras&lt;/td&gt;&lt;td&gt;200MP Main + 48MP Ultra Wide + 48MP Periscope Telephoto (10x Optical Zoom)&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Front Camera&lt;/td&gt;&lt;td&gt;24MP TrueDepth under-display with Autofocus&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Battery &amp; Charging&lt;/td&gt;&lt;td&gt;5,000 mAh, 45W Wired Fast Charging, 25W MagSafe&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Water &amp; Dust Resistance&lt;/td&gt;&lt;td&gt;IP68 rating (submersible up to 6m for 30 minutes)&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Operating System&lt;/td&gt;&lt;td&gt;iOS 20 with deeply integrated Apple Intelligence 2.0&lt;/td&gt;&lt;/tr&gt;\r\n          &lt;/tbody&gt;\r\n        &lt;/table&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;9. Official Pricing and Warranty Policy at Tech Station:&lt;/h2&gt;\r\n        &lt;p&gt;At Tech Station stores, genuine VN/A Apple iPhone 18 Pro Max units start from 34,990,000 VND for the 256GB baseline configuration, backed by trade-in upgrade subsidies up to 3,000,000 VND and 0% interest installment financing.&lt;/p&gt;\r\n        &lt;p&gt;Every purchase includes our Gold 12-Month Warranty package, offering 1-to-1 replacements within the first 30 days for manufacturer defects, VIP screen accidental damage coverage, and express 2-hour doorstep delivery.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;10. Conclusion: Who Is the iPhone 18 Pro Max For?&lt;/h2&gt;\r\n        &lt;p&gt;The iPhone 18 Pro Max represents the ultimate intersection of futuristic bezel-less engineering, unmatched 2nm silicon performance, and a benchmark-setting 10x telephoto camera system. It is the premier choice for anyone demanding the absolute finest mobile computing experience available.&lt;/p&gt;\r\n        &lt;p&gt;Contact Tech Station today for expert advice and early pre-order reservations featuring exclusive launch gifts available only at Tech Station!&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div class=&quot;end-of-blog-marker&quot;&gt;\r\n        &lt;div class=&quot;marker-title&quot;&gt;❖ [ END OF ARTICLE 01/10: IPHONE 18 PRO MAX ] ❖&lt;/div&gt;\r\n        &lt;div class=&quot;marker-sub&quot;&gt;Tech Station Editorial Team &amp;bull; Category: Apple Flagship Reviews&lt;/div&gt;\r\n        &lt;div class=&quot;marker-copy&quot;&gt;Content copyright &amp;copy; 2026 Tech Station. All rights reserved. Please cite TechStation.vn when reprinting.&lt;/div&gt;\r\n      &lt;/div&gt;\r\n    &lt;/article&gt;\r\n  &lt;/div&gt;\r\n&lt;/body&gt;','','Iphone 18 ProMax','',''),
+(1,2,'Iphone 18 ProMax','&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;\r\n  &lt;style type=&quot;text/css&quot;&gt;\r\n    body {\r\n      font-family: \'Roboto\', sans-serif;\r\n      background-color: #f1f5f9;\r\n      color: #1e293b;\r\n      margin: 0;\r\n      padding: 30px 15px;\r\n    }\r\n    .container {\r\n      max-width: 900px;\r\n      margin: 0 auto;\r\n    }\r\n    .blog-card {\r\n      background: #ffffff;\r\n      border-radius: 12px;\r\n      box-shadow: 0 4px 20px rgba(0,0,0,0.06);\r\n      padding: 40px;\r\n      margin-bottom: 50px;\r\n    }\r\n    h1.blog-title {\r\n      font-size: 28px;\r\n      font-weight: 700;\r\n      color: #1a56db;\r\n      margin-top: 0;\r\n      margin-bottom: 10px;\r\n      line-height: 1.3;\r\n    }\r\n    .blog-meta {\r\n      font-size: 14px;\r\n      color: #64748b;\r\n      font-style: italic;\r\n      margin-bottom: 25px;\r\n    }\r\n    .blog-image {\r\n      width: 100%;\r\n      border-radius: 8px;\r\n      display: block;\r\n      margin: 0 auto 10px auto;\r\n    }\r\n    .image-caption {\r\n      text-align: center;\r\n      font-size: 14px;\r\n      color: #64748b;\r\n      font-style: italic;\r\n      margin-bottom: 25px;\r\n    }\r\n    p {\r\n      text-indent: 30px;\r\n      font-size: 20px;\r\n      margin: 0px 0px 12px 0px;\r\n      line-height: 1.6;\r\n    }\r\n    h2 {\r\n      font-size: 22px;\r\n      font-weight: 500;\r\n      opacity: 0.85;\r\n      color: #2c3e50;\r\n      margin-top: 28px;\r\n      margin-bottom: 12px;\r\n    }\r\n    .specs-table {\r\n      width: 100%;\r\n      border-collapse: collapse;\r\n      margin: 20px 0 25px 0;\r\n      font-size: 16px;\r\n    }\r\n    .specs-table th {\r\n      background-color: #1a56db;\r\n      color: #ffffff;\r\n      padding: 12px 16px;\r\n      text-align: left;\r\n      font-weight: 500;\r\n    }\r\n    .specs-table td {\r\n      padding: 12px 16px;\r\n      border-bottom: 1px solid #e2e8f0;\r\n    }\r\n    .specs-table tr:nth-child(even) {\r\n      background-color: #f8fafc;\r\n    }\r\n    .specs-table td:first-child {\r\n      font-weight: 500;\r\n      color: #1e293b;\r\n      width: 35%;\r\n    }\r\n    .end-of-blog-marker {\r\n      margin-top: 35px;\r\n      padding: 20px 24px;\r\n      background-color: #f1f5f9;\r\n      border: 2px solid #1a56db;\r\n      border-radius: 8px;\r\n      text-align: center;\r\n    }\r\n    .marker-title {\r\n      font-size: 16px;\r\n      font-weight: 700;\r\n      color: #1a56db;\r\n      letter-spacing: 0.5px;\r\n      margin-bottom: 6px;\r\n    }\r\n    .marker-sub {\r\n      font-size: 14px;\r\n      color: #475569;\r\n      font-style: italic;\r\n      margin-bottom: 4px;\r\n    }\r\n    .marker-copy {\r\n      font-size: 12px;\r\n      color: #94a3b8;\r\n    }\r\n  &lt;/style&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n  &lt;div class=&quot;container&quot;&gt;\r\n    &lt;article class=&quot;blog-card&quot;&gt;\r\n      &lt;h1 class=&quot;blog-title&quot;&gt;Đánh Giá iPhone 18 Pro Max: Kỷ Nguyên AI Toàn Năng &amp; Chuẩn Mực Smartphone Tương Lai&lt;/h1&gt;\r\n      &lt;div class=&quot;blog-meta&quot;&gt;Tech Station Review &amp;bull; Đánh giá Flagship Apple &amp;bull; Cập nhật: 2026&lt;/div&gt;\r\n      &lt;img src=&quot;processed_images/iphone_18_promax.jpg&quot; alt=&quot;iPhone 18 Pro Max&quot; class=&quot;blog-image&quot; /&gt;\r\n      &lt;div class=&quot;image-caption&quot;&gt;Hình 1: iPhone 18 Pro Max với thiết kế màn hình tràn viền và công nghệ Face ID ẩn dưới màn hình tại Tech Station.&lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;p&gt;Chào mừng bạn đến với Tech Station. Nếu bạn đang tìm kiếm đỉnh cao công nghệ di động và muốn biết chiếc flagship tối thượng của Apple có gì đột phá, bài viết này sẽ phân tích toàn diện iPhone 18 Pro Max – tuyệt tác định hình lại thị trường smartphone cao cấp trong năm nay. Tại Tech Station, chúng tôi luôn cập nhật những thông tin công nghệ sớm nhất và chính xác nhất để giúp bạn đưa ra lựa chọn đầu tư xứng đáng.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;1. Giới thiệu chung và Định vị sản phẩm:&lt;/h2&gt;\r\n        &lt;p&gt;iPhone 18 Pro Max là biểu tượng tối thượng của dòng smartphone cao cấp mang thương hiệu Apple. Thiết bị này không chỉ đơn thuần là bản nâng cấp cấu hình thường niên, mà đánh dấu bước chuyển mình mang tính lịch sử sang kỷ nguyên phần cứng tối ưu hóa hoàn toàn cho trí tuệ nhân tạo (Apple Intelligence 2.0).&lt;/p&gt;\r\n        &lt;p&gt;Với việc hướng tới nhóm khách hàng cao cấp, doanh nhân, nhà sáng tạo nội dung chuyên nghiệp và các tín đồ công nghệ đòi hỏi trải nghiệm hoàn mỹ nhất, iPhone 18 Pro Max xác lập một tiêu chuẩn mới về sức mạnh xử lý lẫn sự tinh tế trong thẩm mỹ.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;2. Thiết kế nguyên khối Titan thế hệ mới &amp; Màn hình không viền:&lt;/h2&gt;\r\n        &lt;p&gt;Apple tiếp tục hoàn thiện ngôn ngữ thiết kế với khung hợp kim Titan thế hệ thứ 3 (Grade 5 Titanium Plus), được gia công bằng công nghệ cắt laser chính xác giúp máy nhẹ hơn 12% nhưng khả năng chịu lực va đập tăng thêm 25% so với thế hệ trước.&lt;/p&gt;\r\n        &lt;p&gt;Đặc biệt, viền màn hình trên iPhone 18 Pro Max gần như đã biến mất hoàn toàn nhờ công nghệ nén mạch hiển thị siêu mỏng dưới 1mm. Mặt lưng sử dụng kính mờ Ceramic Shield Pro chống bám dấu vân tay tuyệt đối và mang lại cảm giác cầm nắm vô cùng sang trọng, đầm tay.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;3. Màn hình ProMotion Tandem OLED &amp; Face ID ẩn dưới màn hình:&lt;/h2&gt;\r\n        &lt;p&gt;Lần đầu tiên trên dòng iPhone, Apple đã đưa toàn bộ cụm cảm biến Face ID xuống bên dưới tấm nền hiển thị. Phần khuyết Dynamic Island giờ đây được tinh gọn thành một chấm camera trước siêu nhỏ và có thể ẩn đi linh hoạt khi xem video toàn màn hình.&lt;/p&gt;\r\n        &lt;p&gt;Tấm nền Tandem OLED kép thế hệ mới cho độ sáng đỉnh điểm lên tới 3.200 nits ngoài trời nắng gắt, hỗ trợ tần số quét thích ứng ProMotion từ 1Hz đến 144Hz. Mọi thao tác cuộn vuốt, chơi game hay xem nội dung HDR Dolby Vision đều sống động và sắc nét đến từng chi tiết nhỏ nhất.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;4. Sức mạnh vượt giới hạn với vi xử lý Apple A20 Pro 2nm:&lt;/h2&gt;\r\n        &lt;p&gt;Trái tim của iPhone 18 Pro Max là con chip Apple A20 Pro được chế tạo trên tiến trình 2nm tiên tiến nhất thế giới của TSMC. Kiến trúc 6 nhân CPU và 6 nhân GPU thế hệ mới mang lại hiệu suất xử lý đồ họa tăng 35% nhưng tiết kiệm điện năng hơn 25%.&lt;/p&gt;\r\n        &lt;p&gt;Đặc biệt, bộ xử lý thần kinh 16 nhân Neural Engine đạt năng lực tính toán 45 TOPS, cho phép xử lý cục bộ các mô hình ngôn ngữ lớn (LLM) và các tính năng Apple Intelligence 2.0 trực tiếp trên máy mà không cần gửi dữ liệu lên máy chủ đám mây, bảo đảm quyền riêng tư tuyệt đối.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;5. Đột phá cụm camera tiềm vọng 200MP &amp; Khả năng quay không gian:&lt;/h2&gt;\r\n        &lt;p&gt;Hệ thống camera sau của iPhone 18 Pro Max được nâng cấp toàn diện với cảm biến chính Fusion 200MP khẩu độ biến thiên f/1.4 - f/2.8, cho khả năng thu sáng vượt trội trong điều kiện đêm tối.&lt;/p&gt;\r\n        &lt;p&gt;Ống kính tele tiềm vọng Tetraprism thế hệ mới cho phép zoom quang học liên tục từ 5x đến 10x và zoom kỹ thuật số lên đến 100x với sự hỗ trợ của thuật toán AI siêu phân giải. Máy hỗ trợ quay video không gian (Spatial Video) chuẩn 8K 60fps tương thích hoàn hảo với kính thực tế ảo Apple Vision Pro.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;6. Thời lượng pin 2 ngày và công nghệ sạc nhanh MagSafe 2.0:&lt;/h2&gt;\r\n        &lt;p&gt;Nhờ vào viên pin dung lượng lớn 5.000 mAh kết hợp cấu trúc tản nhiệt buồng hơi graphene và tiến trình chip 2nm tiết kiệm điện, iPhone 18 Pro Max tự tin mang lại thời gian sử dụng liên tục lên đến 33 giờ phát video trực tuyến.&lt;/p&gt;\r\n        &lt;p&gt;Công nghệ sạc nhanh có dây 45W cho phép nạp 50% pin chỉ trong vòng 20 phút. Hệ thống sạc không dây MagSafe 2.0 công suất 25W mới đi kèm khả năng cố định nam châm siêu chắc chắn và giảm thiểu tối đa hiện tượng nóng máy khi sạc.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;7. Trí tuệ nhân tạo Apple Intelligence 2.0 cá nhân hóa:&lt;/h2&gt;\r\n        &lt;p&gt;Với Apple Intelligence 2.0, trợ lý Siri đã thực sự trở thành người cộng sự thông minh biết thấu hiểu ngữ cảnh cá nhân của bạn. Siri có thể tìm kiếm chính xác từng bức ảnh, tóm tắt email dài hay tự động lên lịch trình công việc phức tạp dựa trên thói quen hàng ngày.&lt;/p&gt;\r\n        &lt;p&gt;Các công cụ sáng tạo nội dung như Genmoji, Image Playground và công cụ dọn dẹp vật thể thừa trong ảnh Clean Up được nâng cấp vượt bậc, mang lại trải nghiệm tiện ích chưa từng có.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;8. Bảng thông số kỹ thuật tiêu chuẩn của iPhone 18 Pro Max:&lt;/h2&gt;\r\n        &lt;table class=&quot;specs-table&quot;&gt;\r\n          &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Thông số&lt;/th&gt;&lt;th&gt;Chi tiết&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;\r\n          &lt;tbody&gt;\r\n            &lt;tr&gt;&lt;td&gt;Màn hình&lt;/td&gt;&lt;td&gt;6.9 inch Super Retina XDR Tandem OLED, 1-144Hz, 3200 nits&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Vi xử lý (CPU)&lt;/td&gt;&lt;td&gt;Apple A20 Pro (Tiến trình 2nm tiên tiến nhất)&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Bộ nhớ RAM&lt;/td&gt;&lt;td&gt;12GB LPDDR5X tối ưu hóa AI cục bộ&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Bộ nhớ trong (ROM)&lt;/td&gt;&lt;td&gt;256GB / 512GB / 1TB / 2TB NVMe&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Camera sau&lt;/td&gt;&lt;td&gt;Chính 200MP + Góc siêu rộng 48MP + Tele tiềm vọng 48MP (Zoom quang 10x)&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Camera trước&lt;/td&gt;&lt;td&gt;24MP TrueDepth ẩn dưới màn hình với Autofocus&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Dung lượng pin &amp; Sạc&lt;/td&gt;&lt;td&gt;5.000 mAh, Sạc nhanh có dây 45W, MagSafe 25W&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Kháng nước &amp; Bụi&lt;/td&gt;&lt;td&gt;Chuẩn IP68 (chịu độ sâu 6m trong 30 phút)&lt;/td&gt;&lt;/tr&gt;\r\n            &lt;tr&gt;&lt;td&gt;Hệ điều hành&lt;/td&gt;&lt;td&gt;iOS 20 với Apple Intelligence 2.0 tích hợp sâu&lt;/td&gt;&lt;/tr&gt;\r\n          &lt;/tbody&gt;\r\n        &lt;/table&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;9. Giá bán niêm yết và chính sách bảo hành tại Tech Station:&lt;/h2&gt;\r\n        &lt;p&gt;Tại hệ thống Tech Station, iPhone 18 Pro Max chính hãng VN/A được phân phối với mức giá khởi điểm chỉ từ 34.990.000 VNĐ cho phiên bản 256GB, kèm nhiều ưu đãi hấp dẫn như trợ giá thu cũ đổi mới lên đến 3.000.000 VNĐ và trả góp 0% lãi suất.&lt;/p&gt;\r\n        &lt;p&gt;Tất cả sản phẩm bán ra đều được áp dụng chính sách bảo hành vàng 12 tháng 1 đổi 1 trong vòng 30 ngày nếu có lỗi từ nhà sản xuất, bảo hành rơi vỡ màn hình VIP và dịch vụ giao hàng hỏa tốc trong 2 giờ.&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div&gt;\r\n        &lt;h2&gt;10. Tổng kết: iPhone 18 Pro Max dành cho ai?&lt;/h2&gt;\r\n        &lt;p&gt;iPhone 18 Pro Max là đỉnh cao hội tụ của thiết kế không viền tương lai, sức mạnh chip 2nm vô song và hệ thống camera tele 10x hàng đầu. Đây là sự lựa chọn không thể tuyệt vời hơn dành cho những ai tìm kiếm thiết bị công nghệ hoàn hảo nhất hành tinh.&lt;/p&gt;\r\n        &lt;p&gt;Hãy liên hệ ngay với Tech Station để nhận tư vấn chi tiết và đặt hàng trước với những phần quà độc quyền chỉ có tại Tech Station!&lt;/p&gt;\r\n      &lt;/div&gt;\r\n      &lt;div class=&quot;end-of-blog-marker&quot;&gt;\r\n        &lt;div class=&quot;marker-title&quot;&gt;❖ [ HẾT BÀI VIẾT 01/10: IPHONE 18 PRO MAX ] ❖&lt;/div&gt;\r\n        &lt;div class=&quot;marker-sub&quot;&gt;Tech Station Editorial Team &amp;bull; Chuyên mục: Đánh giá Flagship Apple&lt;/div&gt;\r\n        &lt;div class=&quot;marker-copy&quot;&gt;Bản quyền nội dung thuộc về Tech Station &amp;copy; 2026. Mọi hành vi sao chép vui lòng ghi rõ nguồn TechStation.vn&lt;/div&gt;\r\n      &lt;/div&gt;\r\n    &lt;/article&gt;','','Giới thiệu IPhone 18 ProMax','','');
 /*!40000 ALTER TABLE `oc_topic_description` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9026,6 +9083,8 @@ CREATE TABLE `oc_topic_to_store` (
 
 LOCK TABLES `oc_topic_to_store` WRITE;
 /*!40000 ALTER TABLE `oc_topic_to_store` DISABLE KEYS */;
+INSERT INTO `oc_topic_to_store` VALUES
+(1,0);
 /*!40000 ALTER TABLE `oc_topic_to_store` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9169,7 +9228,7 @@ CREATE TABLE `oc_user_group` (
 LOCK TABLES `oc_user_group` WRITE;
 /*!40000 ALTER TABLE `oc_user_group` DISABLE KEYS */;
 INSERT INTO `oc_user_group` VALUES
-(1,'Administrator','{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/html\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/html\"]}'),
+(1,'Administrator','{\"access\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/blog\"],\"modify\":[\"catalog\\/attribute\",\"catalog\\/attribute_group\",\"catalog\\/category\",\"catalog\\/download\",\"catalog\\/filter\",\"catalog\\/filter_group\",\"catalog\\/identifier\",\"catalog\\/information\",\"catalog\\/manufacturer\",\"catalog\\/option\",\"catalog\\/product\",\"catalog\\/review\",\"catalog\\/subscription_plan\",\"cms\\/antispam\",\"cms\\/article\",\"cms\\/comment\",\"cms\\/topic\",\"common\\/developer\",\"common\\/filemanager\",\"common\\/security\",\"customer\\/address\",\"customer\\/custom_field\",\"customer\\/customer\",\"customer\\/customer_approval\",\"customer\\/customer_group\",\"customer\\/gdpr\",\"design\\/banner\",\"design\\/layout\",\"design\\/seo_url\",\"design\\/theme\",\"design\\/translation\",\"error\\/exception\",\"event\\/modification\",\"extension\\/analytics\",\"extension\\/captcha\",\"extension\\/currency\",\"extension\\/dashboard\",\"extension\\/feed\",\"extension\\/fraud\",\"extension\\/language\",\"extension\\/marketplace\",\"extension\\/module\",\"extension\\/other\",\"extension\\/payment\",\"extension\\/report\",\"extension\\/shipping\",\"extension\\/theme\",\"extension\\/total\",\"localisation\\/address_format\",\"localisation\\/country\",\"localisation\\/currency\",\"localisation\\/geo_zone\",\"localisation\\/language\",\"localisation\\/length_class\",\"localisation\\/location\",\"localisation\\/order_status\",\"localisation\\/return_action\",\"localisation\\/return_reason\",\"localisation\\/return_status\",\"localisation\\/stock_status\",\"localisation\\/subscription_status\",\"localisation\\/tax_class\",\"localisation\\/tax_rate\",\"localisation\\/weight_class\",\"localisation\\/zone\",\"mail\\/affiliate\",\"mail\\/authorize\",\"mail\\/customer\",\"mail\\/forgotten\",\"mail\\/gdpr\",\"mail\\/returns\",\"mail\\/reward\",\"mail\\/subscription\",\"mail\\/transaction\",\"marketing\\/affiliate\",\"marketing\\/contact\",\"marketing\\/coupon\",\"marketing\\/marketing\",\"marketplace\\/api\",\"marketplace\\/cron\",\"marketplace\\/event\",\"marketplace\\/extension\",\"marketplace\\/installer\",\"marketplace\\/marketplace\",\"marketplace\\/modification\",\"marketplace\\/promotion\",\"marketplace\\/startup\",\"report\\/online\",\"report\\/report\",\"report\\/statistics\",\"sale\\/order\",\"sale\\/returns\",\"sale\\/subscription\",\"setting\\/setting\",\"setting\\/store\",\"tool\\/backup\",\"tool\\/log\",\"tool\\/notification\",\"tool\\/upgrade\",\"tool\\/upload\",\"user\\/api\",\"user\\/profile\",\"user\\/user\",\"user\\/user_permission\",\"extension\\/opencart\\/api\\/coupon\",\"extension\\/opencart\\/api\\/reward\",\"extension\\/opencart\\/captcha\\/basic\",\"extension\\/opencart\\/currency\\/ecb\",\"extension\\/opencart\\/currency\\/fixer\",\"extension\\/opencart\\/dashboard\\/activity\",\"extension\\/opencart\\/dashboard\\/chart\",\"extension\\/opencart\\/dashboard\\/customer\",\"extension\\/opencart\\/dashboard\\/map\",\"extension\\/opencart\\/dashboard\\/online\",\"extension\\/opencart\\/dashboard\\/order\",\"extension\\/opencart\\/dashboard\\/recent\",\"extension\\/opencart\\/dashboard\\/sale\",\"extension\\/opencart\\/fraud\\/ddos\",\"extension\\/opencart\\/fraud\\/ip\",\"extension\\/opencart\\/module\\/account\",\"extension\\/opencart\\/module\\/banner\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/blog\",\"extension\\/opencart\\/module\\/category\",\"extension\\/opencart\\/module\\/featured\",\"extension\\/opencart\\/module\\/filter\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/information\",\"extension\\/opencart\\/module\\/latest\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/store\",\"extension\\/opencart\\/module\\/topic\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/payment\\/cheque\",\"extension\\/opencart\\/payment\\/cod\",\"extension\\/opencart\\/payment\\/free_checkout\",\"extension\\/opencart\\/report\\/customer\",\"extension\\/opencart\\/report\\/customer_activity\",\"extension\\/opencart\\/report\\/customer_order\",\"extension\\/opencart\\/report\\/customer_reward\",\"extension\\/opencart\\/report\\/customer_search\",\"extension\\/opencart\\/report\\/customer_transaction\",\"extension\\/opencart\\/report\\/marketing\",\"extension\\/opencart\\/report\\/product_purchased\",\"extension\\/opencart\\/report\\/product_viewed\",\"extension\\/opencart\\/report\\/sale_coupon\",\"extension\\/opencart\\/report\\/sale_order\",\"extension\\/opencart\\/report\\/sale_return\",\"extension\\/opencart\\/report\\/sale_shipping\",\"extension\\/opencart\\/report\\/sale_tax\",\"extension\\/opencart\\/report\\/subscription\",\"extension\\/opencart\\/shipping\\/flat\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/theme\\/basic\",\"extension\\/opencart\\/total\\/coupon\",\"extension\\/opencart\\/total\\/credit\",\"extension\\/opencart\\/total\\/handling\",\"extension\\/opencart\\/total\\/low_order_fee\",\"extension\\/opencart\\/total\\/reward\",\"extension\\/opencart\\/total\\/shipping\",\"extension\\/opencart\\/total\\/sub_total\",\"extension\\/opencart\\/total\\/tax\",\"extension\\/opencart\\/total\\/total\",\"extension\\/opencart\\/payment\\/bank_transfer\",\"extension\\/opencart\\/shipping\\/free\",\"extension\\/opencart\\/shipping\\/item\",\"extension\\/opencart\\/shipping\\/weight\",\"extension\\/opencart\\/shipping\\/pickup\",\"extension\\/opencart\\/module\\/bestseller\",\"extension\\/opencart\\/module\\/html\",\"extension\\/opencart\\/module\\/special\",\"extension\\/opencart\\/module\\/blog\"]}'),
 (2,'Demonstration',''),
 (3,'Marketing',''),
 (4,'Product Data Entry',''),
@@ -9195,7 +9254,7 @@ CREATE TABLE `oc_user_login` (
   `user_agent` varchar(255) DEFAULT NULL,
   `date_added` datetime DEFAULT NULL,
   PRIMARY KEY (`user_login_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -9240,7 +9299,10 @@ INSERT INTO `oc_user_login` VALUES
 (33,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-10-29 15:22:05'),
 (34,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-10-29 15:22:12'),
 (35,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-10-29 15:28:21'),
-(36,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-10-31 17:03:31');
+(36,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-10-31 17:03:31'),
+(37,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-11-02 19:23:57'),
+(38,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-11-03 09:43:05'),
+(39,1,'172.19.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0','2026-11-03 10:16:15');
 /*!40000 ALTER TABLE `oc_user_login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -21727,4 +21789,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-11-01 11:36:51
+-- Dump completed on 2026-11-03  3:21:15
